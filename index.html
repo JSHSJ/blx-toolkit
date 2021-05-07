@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>BLX Toolkit</title>
+    <link href="./src/assets/fonts/fonts.css" rel="stylesheet" />
+    <link href="./src/assets/styles/toolkit.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="app"></div>
+    <theme-switcher>
+      <div class="container defaults" data-target="theme-switcher.root">
+        <aside class="sidebar">
+          <div class="stack">
+            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-default">
+              Default Theme
+            </button>
+            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-purple">
+              Purple Theme
+            </button>
+          </div>
+        </aside>
+        <main class="main stack">
+          <div class="">
+            Modal
+            <blx-modal>
+              <button class="blx-CTAButton" data-action="click:blx-modal#open">Open Modal</button>
+              <div class="" data-target="blx-modal.container">
+                <div
+                  class=""
+                  style="position: fixed; left: 0; right: 0; bottom: 0; top: 0; background-color: white; z-index: -1"
+                  data-target="blx-modal.overlay"
+                ></div>
+                <div
+                  class=""
+                  style="z-index: 1; width: 600px; height: 500px; display: flex; background-color: aliceblue"
+                  data-target="blx-modal.content"
+                >
+                  <button class="" data-action="click:blx-modal#close">CLOSE</button>
+                </div>
+              </div>
+            </blx-modal>
+          </div>
+        </main>
+      </div>
+    </theme-switcher>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
