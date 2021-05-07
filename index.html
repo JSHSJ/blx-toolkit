@@ -19,29 +19,104 @@
             <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-purple">
               Purple Theme
             </button>
+            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-mutedLight">
+              Muted Light Theme
+            </button>
+            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-mutedDark">
+              Muted Dark Theme
+            </button>
           </div>
         </aside>
-        <main class="main stack">
-          <div class="">
-            Modal
+
+
+        <main class="main">
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+            <h2 class="blx-Copy__title">Modal</h2>
+            <div class="blx-Copy__body">
+            <p>There's two things to a modal.</p>
+            <h3>The Modal / Dialog handling</h3>
+            <p>Handled by a custom element <pre>`blx-modal`</pre> and consists of</p>
+            <ul>
+              <li>A button with attribute 'data-action="click:blx-modal#open"' to open the modal</li>
+              <li>A container element with attribute 'data-target="blx-modal.container"' to contain all of the modal</li>
+              <li>An overlay element with attribute 'data-target="blx-modal.overlay"' that sits below the content but on top of the document to help focus on the content.</li>
+              <li>A content container element with attribute 'data-target="blx-modal.content"', that sits centered in the middle (or whereever else you like)</li>
+              <li>An optional, but recommended title with attribute 'data-target="blx-modal.modalTitle"'. This is used to label the dialog.</li>
+              <li>An optional, but recommended button with attribute 'data-target="blx-modal.close"' and 'data-action="click:blx-modal#dismiss"''. This will close the element.</li>
+            </ul>
+            <p>This custom element handles all of the logic, accessibility and niceties, but is completely unstyled, although the animations are included.</p>
+            <h3>The style classes</h3>
             <blx-modal>
               <button class="blx-CTAButton" data-action="click:blx-modal#open">Open Modal</button>
-              <div class="" data-target="blx-modal.container">
+              <div class="blx-Modal__container blx-Copy -modal" data-target="blx-modal.container">
                 <div
-                  class=""
-                  style="position: fixed; left: 0; right: 0; bottom: 0; top: 0; background-color: white; z-index: -1"
+                  class="blx-Modal__overlay"
                   data-target="blx-modal.overlay"
                 ></div>
                 <div
-                  class=""
-                  style="z-index: 1; width: 600px; height: 500px; display: flex; background-color: aliceblue"
+                  class="blx-Modal__content"
                   data-target="blx-modal.content"
                 >
-                  <button class="" data-action="click:blx-modal#close">CLOSE</button>
+                  <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy__title">Title (Optional but recommended)</h2>
+                  <div class="box blx-Copy__body">
+                  <p>Content?</p>
+                </div>
+                <button class="blx-CTAButton -icon blx-Modal__close" data-target="blx-modal.close" data-action="click:blx-modal#dismiss"><blx-icon data-name="close" data-size="m" />
+                </button>
                 </div>
               </div>
             </blx-modal>
           </div>
+        </div>
+        </section>
+
+        <section class="blx-Section blx-Copy -section -large">
+          <div class="blx-LayoutContainer">
+          <h2 class="blx-Copy__title">Accordion</h2>
+          <blx-accordion data-hasIcon="true">
+            <div class="box flex-row-center blx-Copy__body" data-target="blx-accordion.header" data-action="click:blx-accordion#toggle">
+              <h3 class="">COOOL SHIT BRO</h3>
+              <blx-icon data-name="arrow-down" data-size="l" data-target="blx-accordion.icon"></blx-icon>
+            </div>
+            <div data-target="blx-accordion.content">
+              <div class="box blx-Copy__body">
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+            </div>
+
+            </div>
+          </blx-accordion>
+
+          <blx-accordion>
+            <div class="box flex-row-center blx-Copy__body" data-target="blx-accordion.header" data-action="click:blx-accordion#toggle">
+              <h3 class="">COOOL SHIT BRO</h3>
+            </div>
+            <div data-target="blx-accordion.content">
+              <div class="box blx-Copy__body">
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+              <p>COOL SHIT BRO</p>
+            </div>
+
+            </div>
+          </blx-accordion>
+
+          </div>
+        </section>
+
+
+        <section class="blx-Section blx-Copy -section">
+          <div class="blx-LayoutContainer">
+          <h2 class="blx-Copy__caption">Icons</h2>
+          <h2 class="blx-Copy__title">Icons</h2>
+          <blx-icon data-name="arrow-down" data-size="l" />
+          </div>
+        </section>
+
         </main>
       </div>
     </theme-switcher>
