@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow-up">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="currentColor" points="10 .586 .293 10.293 1.707 11.707 10 3.414 18.293 11.707 19.707 10.293" transform="translate(6 8)"/>
+  </g>
+</svg>

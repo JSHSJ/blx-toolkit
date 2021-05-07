@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 80" id="arrow-curved-down">
+  <g fill="none" fill-rule="evenodd" stroke="#321337" stroke-width="3" transform="translate(1.489 2.14)">
+    <path d="M3.55914621,56.0405156 C-1.47059544,33.5749486 28.1963332,1.76106258 61.8386035,33.1329871 C73.1745859,43.7039617 65.7543276,36.784459 70.9805248,41.6579666" transform="rotate(47 36.99 38.02)"/>
+    <polyline points="68.511 38.86 68.511 60.86 46.511 60.86" transform="rotate(45 57.511 49.86)"/>
+  </g>
+</svg>
