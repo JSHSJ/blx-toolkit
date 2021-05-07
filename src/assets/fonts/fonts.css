@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Moderat';
+  font-weight: 300;
+  src: url(./Moderat-Light.eot) format('eot');
+  src: url(./Moderat-Light.woff2) format('woff2'),
+    url(./Moderat-Light.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  font-weight: 700;
+  src: url(./Moderat-Bold.eot) format('eot');
+  src: url(./Moderat-Bold.woff2) format('woff2'),
+    url(./Moderat-Bold.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat';
+  font-weight: 500;
+  src: url(./Moderat-Medium.eot) format('eot');
+  src: url(./Moderat-Medium.woff2) format('woff2'),
+    url(./Moderat-Medium.woff) format('woff');
+  font-display: swap;
+}
