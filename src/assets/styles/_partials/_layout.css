@@ -1,0 +1,43 @@
+.blx-Section {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+
+.blx-LayoutContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--containerMaxWidth);
+  padding-left: var(--containerPadding);
+  padding-right: var(--containerPadding);
+}
+
+/* STACK */
+
+.stack {
+  --space: calc(var(--spacing) * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+/* BOX */
+
+.box {
+  padding: var(--contentPadding);
+}
+
+.flex-row-center {
+  display: flex;
+  align-items: center;
+}
+

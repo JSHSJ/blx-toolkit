@@ -1,0 +1,43 @@
+/* MODAL */
+
+.blx-ModalContainer {
+
+}
+
+.blx-Modal__overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--backgroundColorSecondary);
+}
+
+.blx-Modal__content {
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: var(--shadow-stacked);
+  background-color: var(--backgroundColor);
+  border-radius: var(--borderRadius);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.blx-Modal__title {
+  padding-right: calc(var(--spacing) * 8);
+  background-color: var(--backgroundColorSecondary);
+  width: 100%;
+}
+
+.blx-Modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: calc(var(--spacing) * 2);
+  margin-right: calc(var(--spacing) * 2);
+
+  --buttonColor: var(--backgroundColorSecondary);
+  --knockoutColor: var(--textColor);
+  --buttonBorderColor: var(--textColor);
+  --buttonHoverColor: var(--textColor);
+  --buttonHoverTextColor: var(--backgroundColorSecondary);
+}

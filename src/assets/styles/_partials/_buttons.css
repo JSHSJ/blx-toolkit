@@ -1,0 +1,94 @@
+
+
+/* BUTTONS */
+
+.blx-CTAButton {
+  --buttonWidth: auto;
+  --buttonPadding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+  --stateColorLight: var(--buttonHoverColor, var(--buttonColor));
+  max-width: var(--inputMaxWidth);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: var(--buttonFontSize);
+  line-height: var(--buttonLineHeight);
+
+  border-radius: var(--borderRadius);
+  padding: var(--buttonPadding);
+  border: 2px solid;
+  box-sizing: border-box;
+  width: var(--buttonWidth);
+
+  cursor: pointer;
+
+  background-color: var(--buttonColor);
+  color: var(--knockoutColor);
+  border-color: var(--buttonBorderColor);
+  white-space: nowrap;
+  box-shadow: var(--shadowFocus);
+  text-decoration: none;
+}
+
+.blx-CTAButton:hover {
+  background-color: var(--buttonHoverColor, var(--buttonColor));
+  border-color: var(--buttonHoverColor, var(--buttonColor));
+  color: var(--buttonHoverTextColor);
+  opacity: var(--buttonHoverOpacity, 1);
+}
+
+.blx-CTAButton:disabled {
+  --buttonColor: var(--buttonDisabledColor);
+  --buttonBorderColor: var(--buttonDisabledColor);
+  --buttonHoverColor: var(--buttonDisabledColor);
+  --buttonHoverTextColor: var(--backgroundColor);
+
+  color: var(--backgroundColor);
+  cursor: not-allowed;
+}
+
+.blx-CTAButton:focus-visible {
+  outline: none;
+  --shadowFocus: 0 0 0 2px var(--buttonHoverColor, var(--buttonColor));
+}
+
+.blx-CTAButton:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.blx-CTAButton:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* VARIANTS */
+
+.blx-CTAButton.-full {
+  --buttonWidth: 100%;
+}
+
+.blx-CTAButton.-slim {
+  --buttonPadding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+}
+
+.blx-CTAButton.-stealth {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  border: none;
+}
+.blx-CTAButton.-stealth:hover {
+  background-color: var(--backgroundColor);
+  color: var(--linkHoverColor);
+  border: none;
+  opacity: 1;
+}
+
+.blx-CTAButton.-icon {
+  --buttonPadding: calc(var(--spacing) * 1);
+  height: auto;
+}
+/* END BUTTONS */

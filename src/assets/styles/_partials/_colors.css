@@ -1,0 +1,184 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-purple-1: #321337;
+  --color-purple-2: #5b425f;
+  --color-purple-3: #847187;
+  --color-purple-4: #ada1af;
+
+  --color-red-1: #f9423a;
+  --color-red-2: #fa6861;
+  --color-red-3: #fb8e89;
+  --color-red-4: #fdb3b0;
+
+  --color-warmGrey-1: #f2efec;
+  --color-warmGrey-2: #f5f2f0;
+  --color-warmGrey-3: #f7f5f4;
+  --color-warmGrey-4: #faf9f7;
+
+  --color-neutralGrey-1: #656565;
+  --color-neutralGrey-2: #a2a2a2;
+  --color-neutralGrey-3: #d1d1d1;
+  --color-neutralGrey-4: #e9e9e9;
+
+  --color-errorRed-600: #6c1313;
+  --color-errorRed-500: #981b1b;
+  --color-errorRed-400: #c32222;
+  --color-errorRed-300: #e46767;
+  --color-errorRed-200: #f3bebe;
+  --color-errorRed-100: #fbe9e9;
+
+  --color-successGreen-600: #136c13;
+  --color-successGreen-500: #1b981b;
+  --color-successGreen-400: #23c323;
+  --color-successGreen-300: #67e467;
+  --color-successGreen-200: #bef3be;
+  --color-successGreen-100: #e9fbe9;
+
+  --color-informationBlue-600: #0d449e;
+  --color-informationBlue-500: #1a5bc8;
+  --color-informationBlue-400: #4791ef;
+  --color-informationBlue-300: #67acf6;
+  --color-informationBlue-200: #b7defd;
+  --color-informationBlue-100: #e5f4fe;
+
+  --color-warningYellow-600: #8c3f00;
+  --color-warningYellow-500: #ab5500;
+  --color-warningYellow-400: #df881c;
+  --color-warningYellow-300: #f7b35d;
+  --color-warningYellow-200: #ffe1b8;
+  --color-warningYellow-100: #fff0da;
+}
+
+
+.theme-default {
+  --backgroundColor: var(--color-white);
+  --backgroundColorSecondary: var(--color-warmGrey-3);
+  --accentColor: var(--color-red-1);
+  --accentColorSecondary: var(--color-red-2);
+
+  --linkColor: var(--textColor);
+  --linkHoverColor: var(--textColorSecondary);
+
+  --buttonColor: var(--accentColor);
+  --buttonBorderColor: var(--accentColor);
+  --buttonHoverColor: var(--accentColorSecondary);
+  --buttonHoverTextColor: var(--color-white);
+  --buttonDisabledColor: #d1d1d1;
+  --buttonDisabledOpacity: 0.7;
+
+  --buttonSecondaryColor: var(--color-white);
+  --buttonSecondaryTextColor: var(--color-purple-1);
+  --buttonSecondaryBorderColor: var(--color-purple-1);
+  --buttonSecondaryHoverColor: var(--color-purple-2);
+  --buttonSecondaryHoverTextColor: var(--color-white);
+
+  --knockoutColor: var(--color-white);
+  --knockoutColorInverted: var(--color-white);
+
+  --textColor: var(--color-purple-1);
+  --textColorSecondary: var(--color-purple-3);
+  --textColorDisabled: var(--color-neutralGrey-3);
+
+  --inputBackground: var(--knockoutColor);
+  --inputTextColor: var(--textColor);
+  --inputTextColorSecondary: var(--textColorSecondary);
+  --inputValidAccentColor: var(--color-successGreen-500);
+  --inputErrorAccentColor: var(--color-errorRed-400);
+}
+
+.theme-purple {
+  --backgroundColor: var(--color-purple-1);
+  --backgroundColorSecondary: var(--color-purple-3);
+  --accentColor: var(--color-white);
+  --accentColorSecondary: #fb8e89;
+
+  --linkColor: var(--textColor);
+  --linkHoverColor: var(--textColorSecondary);
+
+  --buttonColor: var(--color-purple-1);
+  --buttonBorderColor: var(--accentColor);
+  --buttonHoverColor: var(--accentColor);
+  --buttonHoverTextColor: var(--color-purple-1);
+  --buttonDisabledColor: var(--color-neutralGrey-3);
+  --buttonDisabledOpacity: 0.7;
+
+  --buttonSecondaryColor: var(--color-white);
+  --buttonSecondaryBorderColor: var(--color-purple-1);
+  --buttonSecondaryHoverColor: var(var(--color-purple-2));
+  --buttonSecondaryHoverTextColor: var(--color-white);
+
+  --knockoutColor: #fff;
+  --knockoutInverted: var(--color-purple-1);
+
+  --textColor: #fff;
+  --textColorSecondary: var(--color-purple-4);
+  --textColorDisabled: var(--color-neutralGrey-3);
+
+  --inputBackground: var(--color-purple-4);
+  --inputTextColor: var(--textColor);
+  --inputTextColorSecondary: var(--color-warmGrey-1);
+  --inputValidAccentColor: #1b981b;
+  --inputErrorAccentColor: #c32222;
+}
+
+.theme-mutedLight {
+  --backgroundColor: var(--color-warmGrey-3);
+  --backgroundColorSecondary: var(--color-warmGrey-4);
+  --accentColor: var(--color-red-1);
+  --accentColorSecondary: #fb8e89;
+
+  --linkColor: var(--textColor);
+  --linkHoverColor: var(--textColorSecondary);
+
+  --buttonColor: var(--color-warmGrey-3);
+  --buttonBorderColor: var(--color-purple-1);
+  --buttonHoverColor: var(--color-purple-2);
+  --buttonHoverTextColor: var(--color-white);
+  --buttonDisabledColor: #d1d1d1;
+  --buttonDisabledOpacity: 0.7;
+
+  --knockoutColor: var(--color-purple-1);
+  --knockoutInverted: var(--color-purple-1);
+
+  --textColor: var(--color-purple-1);
+  --textColorSecondary: var(--color-purple-2);
+  --textColorDisabled: #d1d1d1;
+
+  --inputBackground: var(--color-white);
+  --inputTextColor: var(--color-purple-1);
+  --inputTextColorSecondary: var(--color-purple-2);
+  --inputValidAccentColor: #1b981b;
+  --inputErrorAccentColor: #c32222;
+}
+
+.theme-mutedDark {
+  --backgroundColor: var(--color-warmGrey-1);
+  --backgroundColorSecondary: var(--color-warmGrey-3);
+  --accentColor: var(--color-red-1);
+  --accentColorSecondary: #fb8e89;
+
+  --linkColor: var(--textColor);
+  --linkHoverColor: var(--textColorSecondary);
+
+  --buttonColor: var(--color-warmGrey-1);
+  --buttonBorderColor: var(--color-purple-1);
+  --buttonHoverColor: var(--color-purple-2);
+  --buttonHoverTextColor: var(--color-warmGrey-3);
+  --buttonDisabledColor: #d1d1d1;
+  --buttonDisabledOpacity: 0.7;
+
+  --knockoutColor: var(--color-purple-1);
+  --knockoutInverted: var(--color-purple-1);
+
+  --textColor: var(--color-purple-1);
+  --textColorSecondary: var(--color-purple-2);
+  --textColorDisabled: #d1d1d1;
+
+  --inputBackground: var(--color-warmGrey-3);
+  --inputTextColor: var(--color-purple-1);
+  --inputTextColorSecondary: var(--color-purple-2);
+  --inputValidAccentColor: #1b981b;
+  --inputErrorAccentColor: #c32222;
+}
