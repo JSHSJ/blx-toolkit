@@ -1,0 +1,21 @@
+:host:not(:last-of-type) {
+  border-bottom: 2px solid red;;
+}
+
+[data-target="blx-accordion.header"] {
+
+}
+
+[data-target="blx-accordion.content"] {
+  transition: height .3s;
+
+}
+
+
+[data-target="blx-accordion.icon"] {
+  transition: transform .3s;
+}
+.open [data-target="blx-accordion.icon"] {
+  transform: rotate(-180deg);
+}
+
