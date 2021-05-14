@@ -1,0 +1,35 @@
+.valid {
+  color: var(--validStandaloneColor, var(--color-successGreen-500));
+}
+
+.valid-with-bg {
+  color: var(--validForegroundColor, var(--color-successGreen-600));
+  background-color: var(--validBackgroundColor, var(--color-successGreen-200));
+}
+
+.error {
+  color: var(--errorStandaloneColor, var(--color-errorRed-400));
+}
+
+.error-with-bg {
+  color: var(--errorForegroundColor, var(--color-errorRed-500));
+  background-color: var(--errorForegroundColor, var(--color-errorRed-200));
+}
+
+.warning {
+  color: var(--warningStandaloneColor, var(--color-warningYellow-500));
+}
+
+.warning-with-bg {
+  color: var(--warningForegroundColor, var(--color-warningYellow-600));
+  background-color: var(--warningForegroundColor, var(--color-warningYellow-200));
+}
+
+.info {
+  color: var(--infoStandaloneColor, var(--color-informationBlue-500));
+}
+
+.info-with-bg {
+  color: var(--infoForegroundColor, var(--color-informationBlue-600));
+  background-color: var(--infoForegroundColor, var(--color-informationBlue-200));
+}

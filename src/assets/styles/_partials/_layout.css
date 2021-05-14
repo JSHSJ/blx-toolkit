@@ -15,19 +15,14 @@
 /* STACK */
 
 .stack {
-  --space: calc(var(--spacing) * 2);
-  display: flex;
-  flex-direction: column;
+  --gap: calc(var(--spacing) * 2);
+  display: grid;
+  gap: var(--gap);
   justify-content: flex-start;
 }
 
-.stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.stack > * + * {
-  margin-top: var(--space);
+.stack-l {
+  --gap: calc(var(--spacing) * 4);
 }
 
 /* BOX */

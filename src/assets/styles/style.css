@@ -1,11 +1,16 @@
 @import "./_partials/_reset.css";
 @import "./_partials/_colors.css";
+@import "./_partials/_breakpoints.css";
 @import "./_partials/_typography.css";
 @import "./_partials/_layout.css";
 @import "./_partials/_shadows.css";
+@import "./_partials/_states.css";
 
 @import "./_partials/_buttons.css";
+@import "./_partials/_inputs.css";
 @import "./_partials/_modal.css";
+@import "./_partials/_card.css";
+@import "./_partials/_carousel.css";
 
 html {
   font-family: 'Moderat', sans-serif;
@@ -15,8 +20,15 @@ html {
   background-color: white;
 }
 
-:focus:not(:focus-visible) {
+:focus, .default-focus:focus, button:focus {
+  outline-offset: .75ch;
+  outline: 1px solid var(--textColorSecondary);
+  border-radius: var(--borderRadius-small);
+}
+
+:focus:not(:focus-visible), .default-focus:focus:not(:focus-visible), button:focus:not(:focus-visible) {
   outline: none;
+  borderRadius: inherit;
 }
 
 main {
@@ -43,51 +55,28 @@ main {
   --padding: 1rem;
   --spacing: 0.5rem;
 
+  --borderRadius-small: 2px;
   --borderRadius: 4px;
+  --borderRadius-large: 6px;
 
   --sectionPadding: calc(var(--spacing) * 8);
 
   --containerPadding: calc(var(--spacing) * 2);
   --containerMaxWidth: 1160px;
 
-  --contentPadding: calc(var(--spacing) * 2);
+  --defaultPadding-horizontal: calc(var(--spacing) * 2);
+  --defaultPadding-vertical: calc(var(--defaultPadding-horizontal) * 0.75);
+
+  --contentPadding: var(--defaultPadding-vertical) var(--defaultPadding-horizontal);
 }
 
-@media screen and (min-width: 768px) {
+
+@media (--bp-small) {
   .defaults {
-    --containerPadding: calc(var(--spacing) * 4);
     --sectionPadding: calc(var(--spacing) * 15);
+    --defaultPadding-horizontal: calc(var(--spacing) * 4);
   }
 }
-
-
-
-
-/* --paddingLeft: var(--columnPaddingNormal);
---paddingRight: var(--columnPaddingMedium);
---headerPaddingLeft: var(--paddingLeft);
---headerPaddingRight: var(--paddingRight);
---headerMaxWidth: var(--copyMaxWidth);
---bodyPaddingLeft: var(--paddingLeft);
---bodyPaddingRight: var(--paddingRight);
---bodyMaxWidth: var(--copyMaxWidth);
---footerPaddingLeft: var(--paddingLeft);
---footerPaddingRight: var(--paddingLeft);
---footerRowGap: var(--rowGapMedium);
---ctaSpacing: 16px; */
-
-/* --titleFont: var(--titleWeight) var(--titleFontSize)/var(--titleLineHeight) var(--fontFamily);
---captionFont: var(--fontWeightBold) var(--captionFontSize,18px)/var(--captionLineHeight,1.555555556) var(--fontFamily);
---bodyFont: var(--fontWeightNormal) var(--bodyFontSize,18px)/var(--bodyLineHeight,1.555555556) var(--fontFamily);
-letter-spacing: .2px; */
-
-/* Typography */
-
-
-/* end typography */
-
-/* buttons */
-
 
 
 /* SPECIAL BUTTON */

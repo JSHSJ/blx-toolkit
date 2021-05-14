@@ -1,10 +1,4 @@
 export type Subscription = { unsubscribe(): void };
-const NullSubscription = {
-  unsubscribe() {
-    /* Do nothing */
-  },
-};
-
 export const fromEvent = (
   target: EventTarget,
   eventName: string,
@@ -16,6 +10,26 @@ export const fromEvent = (
   return {
     unsubscribe: () => {
       target.removeEventListener(eventName, onNext, options);
+    },
+  };
+};
+
+export const fromClickOutside = (
+  container: HTMLElement,
+  onNext: Function,
+  options: boolean | AddEventListenerOptions = false
+) => {
+  const eventListener = (event: MouseEvent) => {
+    if (!container || !container.contains(event.target as HTMLElement)) {
+      onNext();
+    }
+  };
+
+  window.addEventListener('click', eventListener, options);
+
+  return {
+    unsubscribe: () => {
+      window.removeEventListener('click', eventListener);
     },
   };
 };

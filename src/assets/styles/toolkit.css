@@ -25,18 +25,8 @@
   padding-bottom: 0;
 }
 
-.stack {
-  --space: calc(var(--spacing) * 2);
+.carousel-example-item {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.stack > * + * {
-  margin-top: var(--space);
+  align-items: center;
+  justify-content: center;
 }

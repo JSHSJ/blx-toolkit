@@ -5,105 +5,73 @@
   --fontWeight-medium: 500;
   --fontWeight-light: 300;
 
-  --fontSize-h1: clamp(2rem, 2rem + 1vw, 3rem);
-  --fontSize-h2: clamp(1.75rem, 1.75rem + 0.5vw, 2.375rem);
-  --fontSize-h3: clamp(1.375rem, 1.375rem + 0.5vw, 1.75rem);
-
-  --fontSize-copy: clamp(1rem, 1rem + 0.25vw, 1.125rem);
+  --fontSize-hero: clamp(2.25rem, 2.25rem + 1.25vw, 3.75rem);
+  --fontSize-2xl: clamp(2rem, 2rem + 1vw, 3rem);
+  --fontSize-xl: clamp(1.75rem, 1.75rem + 0.5vw, 2.375rem);
+  --fontSize-large: clamp(1.375rem, 2vmin, 1.75rem);
+  --fontSize-copy: clamp(1rem, 1.8vmin, 1.125rem);
   --fontSize-base: 1rem;
 
+  --fontSize-small: 0.875rem;
+  --fontSize-tiny: 0.75rem;
+
   --lineHeight: 1.4;
+  --lineHeightTitle: 1.3;
 
 }
 
-.typo-hero {
-  --fontSize: clamp(2.25rem, 2.25rem + 1.25vw, 3.75rem);
-  --lineHeight: 1.4;
+h1 {
+  font-size: var(--fontSize-2xl);
+  line-height: var(--lineHeightTitle);
+  font-weight: var(--fontWeight-bold);
 }
-
-.typo-h1 {
-  --fontSize: clamp(2rem, 2rem + 1vw, 3rem);
-  --lineHeight: 1.4;
+h2 {
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeightTitle);
+  font-weight: var(--fontWeight-bold);
 }
-.typo-h2 {
-  --fontSize: clamp(1.75rem, 1.75rem + 0.5vw, 2.375rem);
-  --lineHeight: 1.4;
+h3 {
+  font-size: var(--fontSize-large);
+  line-height: var(--lineHeightTitle);
+  font-weight: var(--fontWeight-bold);
 }
-.typo-h3 {
-  --fontSize: clamp(1.375rem, 1.375rem + 0.5vw, 1.75rem);
-  --lineHeight: 1.4;
+h4 {
+  font-size: var(--fontSize-large);
+  line-height: var(--lineHeight);
+  font-weight: var(--fontWeight-medium);
 }
-.typo-h4 {
-  --fontSize: clamp(1.125rem, 1.125rem + 0.25vw, 1.25rem);
-  --lineHeight: 1.4;
-}
-.typo-h5 {
-  --fontSize: clamp(1rem, 1rem + 0.25vw, 1.125rem);
-  --lineHeight: 1.4;
-}
-
-.typo-paragraph {
-  --fontSize: 1rem;
-  --lineHeight: 1.4;
-}
-.typo-label {
-  --fontSize: 0.875rem;
-  --lineHeight: 1.4;
-}
-.typo-small {
-  --fontSize: 0.75rem;
-  --lineHeight: 1.4;
-}
-
-
-h1:not([class]) {
-  font-size: var(--fontSize-h1);
+h5 {
+  font-size: var(--fontSize-copy);
   line-height: var(--lineHeight);
   font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
 }
-h2:not([class]) {
-  font-size: var(--fontSize-h2);
+h6 {
+  font-size: var(--fontSize-copy);
   line-height: var(--lineHeight);
-  font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
-}
-h3:not([class]) {
-  font-size: var(--fontSize-h3);
-  line-height: var(--lineHeight);
-  font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
-}
-h4:not([class]) {
-  font-size: var(--fontSize-h4);
-  line-height: var(--lineHeight);
-  font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
-}
-h5:not([class]) {
-  font-size: var(--fontSize-h5);
-  line-height: var(--lineHeight);
-  font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
-}
-h6:not([class]) {
-  font-size: var(--fontSize-h6);
-  line-height: var(--lineHeight);
-  font-weight: var(--fontWeight-bold);
-  margin-bottom: 1em;
-  margin-top: calc(1em * var(--ratio));
+  font-weight: var(--fontWeight-medium);
 }
 
-li:not([class]):not(:last-child) {
+ul {
+  padding: var(--defaultPadding-horizontal);
+  display: grid;
+  gap: var(--spacing);
+}
+
+li {
   font-size: var(--fontSize-base);
   line-height: var(--lineHeight);
-  font-family: var(--fontFamily-light);
-  margin-bottom: 0.5em;
+  font-weight: var(--fontWeight-light);
+  list-style: square;
+  &::marker {
+    color: var(--accentColor);
+  }
+}
+
+
+small:not([class]) {
+  font-size: var(--fontSize-small);
+  line-height: var(--lineHeight);
+  font-weight: var(--fontWeight-light);
 }
 
 pre:not([class]) {
@@ -111,18 +79,86 @@ pre:not([class]) {
   border-radius: 4px;
   padding: 0.15em;
   display: inline-block;
-
 }
+
+p:not([class]) {
+  font-size: var(--fontSize-base);
+  line-height: var(--lineHeight);
+  font-weight: var(--fontWeight-light);
+}
+
+strong {
+  font-weight: var(--fontWeight-medium);
+}
+
+.fontSize-hero {
+  font-size: var(--fontSize-hero);
+  line-height: var(--lineHeightTitle);
+}
+
+.fontSize-2xl {
+  font-size: var(--fontSize-2xl);
+  line-height: var(--lineHeightTitle);
+}
+
+.fontSize-xl {
+  font-size: var(--fontSize-xl);
+  line-height: var(--lineHeightTitle);
+}
+
+.fontSize-large {
+  font-size: var(--fontSize-large);
+  line-height: var(--lineHeight);
+}
+
+.fontSize-copy {
+  font-size: var(--fontSize-copy);
+  line-height: var(--lineHeight);
+}
+
+.fontSize-base {
+  font-size: var(--fontSize-base);
+  line-height: var(--lineHeight);
+}
+
+.fontSize-small {
+  font-size: var(--fontSize-small);
+  line-height: var(--lineHeight);
+}
+
+.fontSize-tiny {
+  font-size: var(--fontSize-tiny);
+  line-height: var(--lineHeight);
+}
+
+.fontWeight-bold {
+  font-weight: var(--fontWeight-bold);
+}
+
+.fontWeight-medium {
+  font-weight: var(--fontWeight-medium);
+}
+
+.fontWeight-light {
+  font-weight: var(--fontWeight-light);
+}
+
+
 
 .blx-Copy {
   --titleFont: var(--titleWeight) var(--titleFontSize)/var(--titleLineHeight) var(--fontFamily);
   --captionFont: var(--fontWeight-light) var(--captionFontSize,18px)/var(--captionLineHeight,1.555555556) var(--fontFamily);
   --bodyFont: var(--fontWeight-light) var(--bodyFontSize,18px)/var(--bodyLineHeight,1.555555556) var(--fontFamily);
+
+  --largeSpacing: calc(var(--spacing) * 2);
+  --paragraphSpacing: calc(var(--spacing) * 1);
+
+
 }
 
 .blx-Copy.-section {
   --titleWeight: var(--fontWeight-bold);
-  --titleFontSize: var(--fontSize-h2);
+  --titleFontSize: var(--fontSize-xl);
   --titleLineHeight: 1.4;
 
   --captionFontSize: 20px;
@@ -133,7 +169,7 @@ pre:not([class]) {
 
 .blx-Copy.-modal {
   --titleWeight: var(--fontWeight-bold);
-  --titleFontSize: var(--fontSize-h3);
+  --titleFontSize: var(--fontSize-large);
   --titleLineHeight: 1.4;
 
   --bodyFontSize: var(--fontSize-base);
@@ -147,6 +183,14 @@ pre:not([class]) {
 .blx-Copy__body {
   font: var(--bodyFont);
   color: var(--textColor);
+
+  & > * + * {
+    margin-top: var(--largeSpacing);
+  }
+
+  & > p + p {
+    margin-top: var(--paragraphSpacing);
+  }
 }
 
 .blx-Copy__title {
@@ -157,7 +201,7 @@ pre:not([class]) {
 .blx-Copy__caption {
   font: var(--captionFont);
   text-decoration: underline;
-  margin-bottom: var(--spacing-2);
+  /* margin-bottom: var(--spacing-2); */
   text-underline-offset: 0.1em;
   text-decoration-color: var(--accentColor);
   text-underline-offset: 0.2em;

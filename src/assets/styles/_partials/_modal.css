@@ -32,8 +32,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: calc(var(--spacing) * 2);
-  margin-right: calc(var(--spacing) * 2);
+  margin-top: var(--defaultPadding-vertical);
+  margin-right: var(--defaultPadding-horizontal);
 
   --buttonColor: var(--backgroundColorSecondary);
   --knockoutColor: var(--textColor);

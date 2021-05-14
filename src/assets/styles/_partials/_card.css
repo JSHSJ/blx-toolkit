@@ -1,0 +1,34 @@
+
+.blx-Card {
+  --cardSpacing-horizontal: var(--defaultPadding-horizontal);
+  --cardSpacing-vertical:var(--defaultPadding-vertical);
+
+
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-flat);
+
+  padding:  var(--cardSpacing-vertical) var(--cardSpacing-horizontal);
+
+  /* NOT SURE YET */
+  background-color: var(--color-white);
+  color: var(--color-purple-1);
+  position: relative;
+}
+
+.blx-Card-status {
+  position: absolute;
+  top: 0;
+  left: var(--cardSpacing-horizontal);
+  border-radius: var(--borderRadius-small);
+  font-size: var(--fontSize-tiny);
+  transform: translateY(-50%);
+  padding: calc(var(--spacing) * 0.5) var(--spacing);
+}
+
+/* TODO: Adjust this */
+.blx-Card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

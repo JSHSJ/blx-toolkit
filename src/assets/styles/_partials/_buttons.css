@@ -5,7 +5,7 @@
 .blx-CTAButton {
   --buttonWidth: auto;
   --buttonPadding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
-  --stateColorLight: var(--buttonHoverColor, var(--buttonColor));
+  --stateColorLight: var(--buttonHoverColor, var(--buttonBackgroundColor));
   max-width: var(--inputMaxWidth);
 
   display: inline-flex;
@@ -25,8 +25,8 @@
 
   cursor: pointer;
 
-  background-color: var(--buttonColor);
-  color: var(--knockoutColor);
+  background-color: var(--buttonBackgroundColor);
+  color: var(--buttonColor);
   border-color: var(--buttonBorderColor);
   white-space: nowrap;
   box-shadow: var(--shadowFocus);
@@ -34,25 +34,25 @@
 }
 
 .blx-CTAButton:hover {
-  background-color: var(--buttonHoverColor, var(--buttonColor));
-  border-color: var(--buttonHoverColor, var(--buttonColor));
+  background-color: var(--buttonHoverColor, var(--buttonBackgroundColor));
+  border-color: var(--buttonHoverColor, var(--buttonBackgroundColor));
   color: var(--buttonHoverTextColor);
   opacity: var(--buttonHoverOpacity, 1);
 }
 
 .blx-CTAButton:disabled {
-  --buttonColor: var(--buttonDisabledColor);
+  --buttonBackgroundColor: var(--buttonDisabledColor);
   --buttonBorderColor: var(--buttonDisabledColor);
-  --buttonHoverColor: var(--buttonDisabledColor);
+  --buttonHoverColor: var(--buttonDisableColor);
   --buttonHoverTextColor: var(--backgroundColor);
+  --buttonColor: var(--backgroundColor);
 
-  color: var(--backgroundColor);
   cursor: not-allowed;
 }
 
 .blx-CTAButton:focus-visible {
   outline: none;
-  --shadowFocus: 0 0 0 2px var(--buttonHoverColor, var(--buttonColor));
+  --shadowFocus: 0 0 0 2px var(--buttonHoverColor, var(--buttonBackgroundColor));
 }
 
 .blx-CTAButton:active:focus {
@@ -76,15 +76,20 @@
 }
 
 .blx-CTAButton.-stealth {
-  background-color: var(--backgroundColor);
-  color: var(--textColor);
-  border: none;
+  --buttonBackgroundColor: var(--backgroundColor);
+  --buttonColor: var(--textColor);
+  --buttonBorderColor: transparent;
+  --buttonHoverTextColor: var(--linkHoverColor);
+  --buttonHoverColor: var(--backgroundColor);
 }
-.blx-CTAButton.-stealth:hover {
-  background-color: var(--backgroundColor);
-  color: var(--linkHoverColor);
-  border: none;
-  opacity: 1;
+
+.blx-CTAButton.-secondary {
+  --buttonColor: var(--textColor);
+  --buttonBackgroundColor: var(--backgroundColor);
+  --buttonBorderColor: var(--textColor);
+  --buttonHoverColor: var(--textColorSecondary);
+  --buttonHoverTextColor: var(--backgroundColor);
+
 }
 
 .blx-CTAButton.-icon {

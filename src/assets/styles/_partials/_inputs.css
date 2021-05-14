@@ -1,0 +1,52 @@
+.blx-SelectBox {
+
+  width: 100%;
+  padding: calc(var(--spacing) * 2);
+  font: var(--bodyFont);
+  color: var(--textColor);
+
+  background: var(--inputBackground);
+  border: 2px solid var(--inputTextColorSecondary);
+  border-radius: var(--borderRadius);
+
+  &.-open {
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    border-color: var(--inputTextColor);
+  }
+}
+
+.blx-DataList {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 0;
+  width: 100%;
+
+
+  background: var(--backgroundColor);
+  border: 2px solid var(--textColor);
+  border-top: none;
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+}
+
+.blx-DataList-option {
+  width: 100%;
+  font: var(--bodyFont);
+  color: var(--textColor);
+  padding: calc(var(--spacing) * 2);
+
+  &.-selected {
+    background-color: var(--textColorSecondary);
+    color: var(--backgroundColorSecondary);
+  }
+
+  &.-active {
+    background-color: var(--backgroundColorSecondary);
+    color: var(--textColor);
+  }
+
+  &:hover {
+    background-color: var(--backgroundColorSecondary);
+  }
+}
