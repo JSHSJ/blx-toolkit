@@ -32,7 +32,7 @@ export class BlxCarouselElement extends HTMLElement {
     this.setupSubscriptions();
 
     this.container.setAttribute('role', 'region');
-    this.items.forEach((i) => this.setAttribute('role', 'group'));
+    this.items.forEach(() => this.setAttribute('role', 'group'));
 
     this.performSlide();
   }
