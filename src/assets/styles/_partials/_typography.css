@@ -5,19 +5,60 @@
   --fontWeight-medium: 500;
   --fontWeight-light: 300;
 
-  --fontSize-hero: clamp(2.25rem, 2.25rem + 1.25vw, 3.75rem);
-  --fontSize-2xl: clamp(2rem, 2rem + 1vw, 3rem);
-  --fontSize-xl: clamp(1.75rem, 1.75rem + 0.5vw, 2.375rem);
-  --fontSize-large: clamp(1.375rem, 2vmin, 1.75rem);
-  --fontSize-copy: clamp(1rem, 1.8vmin, 1.125rem);
+  --ratio: 1.4;
+  --ratio-small: 1.25;
+
+
+
+  --sMin-5: calc(var(--sMin-4) / var(--ratio-small));
+  --sMin-4: calc(var(--sMin-3) / var(--ratio-small));
+  --sMin-3: calc(var(--sMin-2) / var(--ratio-small));
+  --sMin-2: calc(var(--sMin-1) / var(--ratio-small));
+  --sMin-1: calc(var(--sMin0) / var(--ratio-small));
+  --sMin0: 1rem;
+  --sMin1: calc(var(--sMin0) * var(--ratio-small));
+  --sMin2: calc(var(--sMin1) * var(--ratio-small));
+  --sMin3: calc(var(--sMin2) * var(--ratio-small));
+  --sMin4: calc(var(--sMin3) * var(--ratio-small));
+  --sMin5: calc(var(--sMin4) * var(--ratio-small));
+
+  --sMax-5: calc(var(--sMax-4) / var(--ratio));
+  --sMax-4: calc(var(--sMax-3) / var(--ratio));
+  --sMax-3: calc(var(--sMax-2) / var(--ratio));
+  --sMax-2: calc(var(--sMax-1) / var(--ratio));
+  --sMax-1: calc(var(--sMax0) / var(--ratio));
+  --sMax0: 1rem;
+  --sMax1: calc(var(--sMax0) * var(--ratio));
+  --sMax2: calc(var(--sMax1) * var(--ratio));
+  --sMax3: calc(var(--sMax2) * var(--ratio));
+  --sMax4: calc(var(--sMax3) * var(--ratio));
+  --sMax5: calc(var(--sMax4) * var(--ratio));
+
+
+  --s-5: clamp(var(--sMin-4), var(--sMin-4) + 0.4vmin, var(--sMax-4));
+  --s-4: clamp(var(--sMin-4), var(--sMin-4) + 0.4vmin, var(--sMax-4));
+  --s-3: clamp(var(--sMin-3), var(--sMin-3) + 0.4vmin, var(--sMax-3));
+  --s-2: var(--sMin-2);
+  --s-1: var(--sMin-1);
+  --s0: 1rem;
+  --s1: clamp(var(--sMin1), var(--sMin1) - calc(var(--sMin1) * 0.05) + 0.25vmin, var(--sMax1));
+  --s2: clamp(var(--sMin2), var(--sMin2) - calc(var(--sMin2) * 0.1) + 0.75vmin, var(--sMax2));
+  --s3: clamp(var(--sMin3), var(--sMin3) - calc(var(--sMin2) * 0.2) + 1.5vmin, var(--sMax3));
+  --s4: clamp(var(--sMin4), var(--sMin4)  - calc(var(--sMin2) * 0.4) + 3vmin, var(--sMax4));
+  --s5: clamp(var(--sMin5), var(--sMin5)  - calc(var(--sMin2) * 0.8) + 6vmin, var(--sMax5));
+
+  --fontSize-hero: var(--s4);
+  --fontSize-2xl: var(--s3);
+  --fontSize-xl: var(--s2);
+  --fontSize-large: var(--s1);
+
   --fontSize-base: 1rem;
 
-  --fontSize-small: 0.875rem;
-  --fontSize-tiny: 0.75rem;
+  --fontSize-small: var(--s-1);
+  --fontSize-tiny: var(--s-2);
 
-  --lineHeight: 1.4;
-  --lineHeightTitle: 1.3;
-
+  --lineHeight: var(--ratio);
+  --lineHeightTitle: var(--ratio-small);
 }
 
 h1 {
@@ -32,7 +73,7 @@ h2 {
 }
 h3 {
   font-size: var(--fontSize-large);
-  line-height: var(--lineHeightTitle);
+  line-height: var(--lineHeight);
   font-weight: var(--fontWeight-bold);
 }
 h4 {
@@ -41,12 +82,12 @@ h4 {
   font-weight: var(--fontWeight-medium);
 }
 h5 {
-  font-size: var(--fontSize-copy);
+  font-size: var(--fontSize-base);
   line-height: var(--lineHeight);
   font-weight: var(--fontWeight-bold);
 }
 h6 {
-  font-size: var(--fontSize-copy);
+  font-size: var(--fontSize-base);
   line-height: var(--lineHeight);
   font-weight: var(--fontWeight-medium);
 }
@@ -111,11 +152,6 @@ strong {
   line-height: var(--lineHeight);
 }
 
-.fontSize-copy {
-  font-size: var(--fontSize-copy);
-  line-height: var(--lineHeight);
-}
-
 .fontSize-base {
   font-size: var(--fontSize-base);
   line-height: var(--lineHeight);
@@ -176,13 +212,13 @@ strong {
   --bodyLineHeight: 1.4;
 }
 
-.blx-Copy.-large {
-  --bodyFontSize: var(--fontSize-copy);
+.blx-Copy.-small {
+  --bodyFontSize: 16px;
 }
 
 .blx-Copy__body {
   font: var(--bodyFont);
-  color: var(--textColor);
+  color: var(--text1);
 
   & > * + * {
     margin-top: var(--largeSpacing);
@@ -195,14 +231,15 @@ strong {
 
 .blx-Copy__title {
   font: var(--titleFont);
-  color: var(--textColor);
+  color: var(--text1);
 }
 
 .blx-Copy__caption {
   font: var(--captionFont);
+  color: var(--text1);
   text-decoration: underline;
   /* margin-bottom: var(--spacing-2); */
   text-underline-offset: 0.1em;
-  text-decoration-color: var(--accentColor);
+  text-decoration-color: var(--brand1);
   text-underline-offset: 0.2em;
 }
