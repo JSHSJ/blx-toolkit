@@ -6,3 +6,4 @@ import './components/Accordion/Accordion';
 import './components/Carousel/Carousel';
 import './components/SelectBox/SelectBox';
 import './components/Icon/Icon';
+import './components/Loader/Loader';

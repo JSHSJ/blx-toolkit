@@ -28,331 +28,427 @@
           </div>
         </aside>
 
-
         <main class="main">
-
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-            <h2 class="blx-Copy__caption">Colors</h2>
-            <h2 class="blx-Copy__title">States</h2>
-            <div class="stack">
+              <h2 class="blx-Copy__caption">Colors</h2>
+              <h2 class="blx-Copy__title">States</h2>
+              <div class="stack">
+                <div class="valid">valid</div>
+                <div class="valid-with-bg">valid-with-bg</div>
 
-              <div class="valid">valid</div>
-              <div class="valid-with-bg">valid-with-bg</div>
+                <div class="error">error</div>
+                <div class="error-with-bg">error-with-bg</div>
 
-              <div class="error">error</div>
-              <div class="error-with-bg">error-with-bg</div>
+                <div class="warning">warning</div>
+                <div class="warning-with-bg">warning-with-bg</div>
 
-              <div class="warning">warning</div>
-              <div class="warning-with-bg">warning-with-bg</div>
-
-              <div class="info">info</div>
-              <div class="info-with-bg">info-with-bg</div>
-
+                <div class="info">info</div>
+                <div class="info-with-bg">info-with-bg</div>
+              </div>
             </div>
-          </div>
           </section>
           <section class="blx-Section">
             <div class="blx-LayoutContainer blx-Copy -section">
-            <h2 class="blx-Copy__caption">Typography</h2>
-            <h2 class="blx-Copy__title">States</h2>
+              <h2 class="blx-Copy__caption">Typography</h2>
+              <h2 class="blx-Copy__title">States</h2>
 
-            <div class="blx-Copy__body">
-              <h1>Headline 1</h1>
-              <h2>Headline 2</h2>
-              <h3>Headline 3</h3>
-              <h4>Headline 4</h4>
-              <h5>Headline 5</h5>
-              <h6>Headline 6</h6>
+              <div class="blx-Copy__body">
+                <h1 class="fontSize-hero">Headline Hero</h1>
+                <h1>Headline 1</h1>
+                <h2>Headline 2</h2>
+                <h3>Headline 3</h3>
+                <h4>Headline 4</h4>
+                <h5>Headline 5</h5>
+                <h6>Headline 6</h6>
 
+                <p>
+                  Parapgrah Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport
+                  height). Useful sometimes, as they are always relative to the viewport. No cascading or influence by
+                  parent elements.
+                </p>
 
-              <p>Parapgrah Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport height). Useful sometimes, as they are always relative to the viewport. No cascading or influence by parent elements.</p>
+                <p>
+                  <small
+                    >Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport height).
+                    Useful sometimes, as they are always relative to the viewport. No cascading or influence by parent
+                    elements.</small
+                  >
+                </p>
 
-              <p><small>Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport height). Useful sometimes, as they are always relative to the viewport. No cascading or influence by parent elements.</small></p>
-
-              <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+              </div>
             </div>
-
-          </div>
           </section>
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-            <h2 class="blx-Copy__title">Modal</h2>
-            <div class="blx-Copy__body">
-            <p>There's two things to a modal.</p>
-            <h3>The Modal / Dialog handling</h3>
-            <p>Handled by a custom element <pre>`blx-modal`</pre> and consists of</p>
-            <ul>
-              <li>A button with attribute 'data-action="click:blx-modal#open"' to open the modal</li>
-              <li>A container element with attribute 'data-target="blx-modal.container"' to contain all of the modal</li>
-              <li>An overlay element with attribute 'data-target="blx-modal.overlay"' that sits below the content but on top of the document to help focus on the content.</li>
-              <li>A content container element with attribute 'data-target="blx-modal.content"', that sits centered in the middle (or whereever else you like)</li>
-              <li>An optional, but recommended title with attribute 'data-target="blx-modal.modalTitle"'. This is used to label the dialog.</li>
-              <li>An optional, but recommended button with attribute 'data-target="blx-modal.close"' and 'data-action="click:blx-modal#dismiss"''. This will close the element.</li>
-            </ul>
-            <p>This custom element handles all of the logic, accessibility and niceties, but is completely unstyled, although the animations are included.</p>
-            <h3>The style classes</h3>
-            <blx-modal>
-              <button class="blx-CTAButton" data-action="click:blx-modal#open">Open Modal</button>
-              <div class="blx-Modal__container blx-Copy -modal" data-target="blx-modal.container">
+              <h2 class="blx-Copy__title">Modal</h2>
+              <div class="blx-Copy__body">
+                <p>There's two things to a modal.</p>
+                <h3>The Modal / Dialog handling</h3>
+                <p>Handled by a custom element `blx-modal` and consists of</p>
+                <ul>
+                  <li>A button with attribute 'data-action="click:blx-modal#open"' to open the modal</li>
+                  <li>
+                    A container element with attribute 'data-target="blx-modal.container"' to contain all of the modal
+                  </li>
+                  <li>
+                    An overlay element with attribute 'data-target="blx-modal.overlay"' that sits below the content but
+                    on top of the document to help focus on the content.
+                  </li>
+                  <li>
+                    A content container element with attribute 'data-target="blx-modal.content"', that sits centered in
+                    the middle (or whereever else you like)
+                  </li>
+                  <li>
+                    An optional, but recommended title with attribute 'data-target="blx-modal.modalTitle"'. This is used
+                    to label the dialog.
+                  </li>
+                  <li>
+                    An optional, but recommended button with attribute 'data-target="blx-modal.close"' and
+                    'data-action="click:blx-modal#dismiss"''. This will close the element.
+                  </li>
+                </ul>
+                <p>
+                  This custom element handles all of the logic, accessibility and niceties, but is completely unstyled,
+                  although the animations are included.
+                </p>
+                <h3>The style classes</h3>
+                <blx-modal>
+                  <button class="blx-CTAButton" data-action="click:blx-modal#open">Open Modal</button>
+                  <div class="blx-Modal__container blx-Copy -modal" data-target="blx-modal.container">
+                    <div class="blx-Modal__overlay" data-target="blx-modal.overlay"></div>
+                    <div class="blx-Modal__content" data-target="blx-modal.content">
+                      <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy__title">
+                        Title (Optional but recommended)
+                      </h2>
+                      <div class="box blx-Copy__body">
+                        <p>Content?</p>
+                      </div>
+                      <button
+                        class="blx-CTAButton -secondary -icon blx-Modal__close"
+                        data-target="blx-modal.close"
+                        data-action="click:blx-modal#dismiss"
+                      >
+                        <blx-icon data-name="close" data-size="m" />
+                      </button>
+                    </div>
+                  </div>
+                </blx-modal>
+              </div>
+            </div>
+          </section>
+
+          <section class="blx-Section blx-Copy -section -large">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy__title">Accordion</h2>
+              <blx-accordion data-hasIcon="true">
                 <div
-                  class="blx-Modal__overlay"
-                  data-target="blx-modal.overlay"
-                ></div>
-                <div
-                  class="blx-Modal__content"
-                  data-target="blx-modal.content"
+                  class="box flex-row-center blx-Copy__body"
+                  data-target="blx-accordion.header"
+                  data-action="click:blx-accordion#toggle"
                 >
-                  <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy__title">Title (Optional but recommended)</h2>
+                  <h3 class="">COOOL SHIT BRO</h3>
+                  <blx-icon data-name="arrow-down" data-size="l" data-target="blx-accordion.icon"></blx-icon>
+                </div>
+                <div data-target="blx-accordion.content">
                   <div class="box blx-Copy__body">
-                  <p>Content?</p>
+                    <p>COOL SHIT BRO</p>
+                    <p>COOL SHIT BRO</p>
+                    <p>COOL SHIT BRO</p>
+                    <p>COOL SHIT BRO</p>
+                  </div>
                 </div>
-                <button class="blx-CTAButton -secondary -icon blx-Modal__close" data-target="blx-modal.close" data-action="click:blx-modal#dismiss"><blx-icon data-name="close" data-size="m" />
+              </blx-accordion>
+            </div>
+          </section>
+
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy__caption">Elements</h2>
+              <h2 class="blx-Copy__title">Cards</h2>
+              <div class="stack stack-l">
+                <div class="blx-Card">Card Content</div>
+                <div class="blx-Card">
+                  <div class="blx-Card-status">Status</div>
+                  <div class="blx-Card-actions">
+                    <button>Action</button>
+                  </div>
+                  Card With Status
+                </div>
+
+                <div class="blx-Card">
+                  <div class="blx-Card-status error-with-bg">Status</div>
+                  Card With Status
+                </div>
+              </div>
+
+              <div class="stack">
+                <h2 class="blx-Copy__title">Buttons</h2>
+                <button class="blx-CTAButton">Button</button>
+
+                <button class="blx-CTAButton -secondary">Button Secondary</button>
+
+                <button class="blx-CTAButton -full">Button Full</button>
+
+                <button class="blx-CTAButton -slim">Button Slim</button>
+
+                <button class="blx-CTAButton -stealth">Button Stealth</button>
+
+                <button class="blx-CTAButton -icon">
+                  <blx-icon data-name="arrow-down" data-size="l" />
                 </button>
-                </div>
-              </div>
-            </blx-modal>
-          </div>
-        </div>
-        </section>
-
-        <section class="blx-Section blx-Copy -section -large">
-          <div class="blx-LayoutContainer">
-          <h2 class="blx-Copy__title">Accordion</h2>
-          <blx-accordion data-hasIcon="true">
-            <div class="box flex-row-center blx-Copy__body" data-target="blx-accordion.header" data-action="click:blx-accordion#toggle">
-              <h3 class="">COOOL SHIT BRO</h3>
-              <blx-icon data-name="arrow-down" data-size="l" data-target="blx-accordion.icon"></blx-icon>
-            </div>
-            <div data-target="blx-accordion.content">
-              <div class="box blx-Copy__body">
-              <p>COOL SHIT BRO</p>
-              <p>COOL SHIT BRO</p>
-              <p>COOL SHIT BRO</p>
-              <p>COOL SHIT BRO</p>
-            </div>
-
-            </div>
-          </blx-accordion>
-
-          </div>
-        </section>
-
-        <section class="blx-Section blx-Copy -section">
-          <div class="blx-LayoutContainer">
-          <h2 class="blx-Copy__caption">Elements</h2>
-          <h2 class="blx-Copy__title">Cards</h2>
-          <div class="stack stack-l">
-          <div class="blx-Card">
-            Card Content
-          </div>
-          <div class="blx-Card">
-            <div class="blx-Card-status">
-              Status
-            </div>
-            <div class="blx-Card-actions">
-              <button>Action</button>
-            </div>
-            Card With Status
-          </div>
-
-          <div class="blx-Card">
-            <div class="blx-Card-status error-with-bg">
-              Status
-            </div>
-            Card With Status
-          </div>
-
-        </div>
-
-        <div class="stack">
-          <h2 class="blx-Copy__title">Buttons</h2>
-          <button class="blx-CTAButton">
-            Button
-          </button>
-
-          <button class="blx-CTAButton -secondary">
-            Button Secondary
-          </button>
-
-
-          <button class="blx-CTAButton -full">
-            Button Full
-          </button>
-
-          <button class="blx-CTAButton -slim">
-            Button Slim
-          </button>
-
-          <button class="blx-CTAButton -stealth">
-            Button Stealth
-          </button>
-
-          <button class="blx-CTAButton -icon">
-          <blx-icon data-name="arrow-down" data-size="l" />
-          </button>
-
-          </div>
-        </div>
-
-
-        </section>
-
-
-        <section class="blx-Section blx-Copy -section">
-          <div class="blx-LayoutContainer">
-          <h2 class="blx-Copy__caption">Icons</h2>
-          <h2 class="blx-Copy__title">Icons</h2>
-          <blx-icon data-name="arrow-down" data-size="l" />
-          </div>
-        </section>
-
-        <section class="blx-Section blx-Copy -section">
-          <div class="blx-LayoutContainer">
-          <h2 class="blx-Copy__caption">Carousels</h2>
-          <div class="stack stack-l">
-          <h2 class="blx-Copy__title">Carousel with images</h2>
-          <blx-carousel>
-            <div class="" data-target="blx-carousel.container">
-              <div class="" data-target="blx-carousel.slideContainer">
-                <div class="" data-target="blx-carousel.itemContainer">
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div><div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div><div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                </div>
-              </div>
-              <div class="">
-                <button data-action="click:blx-carousel#previousSlide">PREV</button>
-                <button data-action="click:blx-carousel#nextSlide">Next</button>
               </div>
             </div>
-          </blx-carousel>
+          </section>
 
-          <h2 class="blx-Copy__title">Carousel with other content</h2>
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy__caption">Icons</h2>
+              <h2 class="blx-Copy__title">Icons</h2>
+              <blx-icon data-name="arrow-down" data-size="l" />
+            </div>
+          </section>
 
-          <blx-carousel>
-            <div class="" data-target="blx-carousel.container">
-              <div class="" data-target="blx-carousel.slideContainer">
-                <div class="" data-target="blx-carousel.itemContainer">
-                <div class="box" data-targets="blx-carousel.items">
-                 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                </div>
-                <div class="box stack" data-targets="blx-carousel.items">
-                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                </div><div class="box" data-targets="blx-carousel.items">
-                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                </div><div class="box" data-targets="blx-carousel.items">
-                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                </div>
-                </div>
-              </div>
-              <div class="">
-                <button data-action="click:blx-carousel#previousSlide">PREV</button>
-                <button data-action="click:blx-carousel#nextSlide">Next</button>
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy__caption">Carousels</h2>
+              <div class="stack stack-l">
+                <h2 class="blx-Copy__title">Carousel with images</h2>
+                <blx-carousel>
+                  <div class="" data-target="blx-carousel.container">
+                    <div class="" data-target="blx-carousel.slideContainer">
+                      <div class="" data-target="blx-carousel.itemContainer">
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button data-action="click:blx-carousel#previousSlide">PREV</button>
+                      <button data-action="click:blx-carousel#nextSlide">Next</button>
+                    </div>
+                  </div>
+                </blx-carousel>
+
+                <h2 class="blx-Copy__title">Carousel with other content</h2>
+
+                <blx-carousel>
+                  <div class="" data-target="blx-carousel.container">
+                    <div class="" data-target="blx-carousel.slideContainer">
+                      <div class="" data-target="blx-carousel.itemContainer">
+                        <div class="box" data-targets="blx-carousel.items">
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                          </p>
+                        </div>
+                        <div class="box stack" data-targets="blx-carousel.items">
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                          </p>
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                          </p>
+                        </div>
+                        <div class="box" data-targets="blx-carousel.items">
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                          </p>
+                        </div>
+                        <div class="box" data-targets="blx-carousel.items">
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button data-action="click:blx-carousel#previousSlide">PREV</button>
+                      <button data-action="click:blx-carousel#nextSlide">Next</button>
+                    </div>
+                  </div>
+                </blx-carousel>
+
+                <blx-carousel data-items-to-display="2" data-items-to-slide="2">
+                  <div class="" data-target="blx-carousel.container">
+                    <div class="" data-target="blx-carousel.slideContainer">
+                      <div class="" data-target="blx-carousel.itemContainer">
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <button data-action="click:blx-carousel#previousSlide">PREV</button>
+                      <button data-action="click:blx-carousel#nextSlide">Next</button>
+                    </div>
+                  </div>
+                </blx-carousel>
+
+                <blx-carousel data-items-to-display="1" data-items-to-slide="1">
+                  <div class="" data-target="blx-carousel.container">
+                    <div class="" data-target="blx-carousel.slideContainer">
+                      <div class="" data-target="blx-carousel.itemContainer">
+                        <div class="carousel-example-item" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="carousel-example-item" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="carousel-example-item" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="carousel-example-item" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                        <div class="carousel-example-item" data-targets="blx-carousel.items">
+                          <img src="https://picsum.photos/400/400?1" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blx-Carousel-arrowContainer">
+                      <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#previousSlide">
+                        <blx-icon data-name="direction-left" data-size="xl"></blx-icon>
+                      </button>
+                      <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#nextSlide">
+                        <blx-icon data-name="direction-right" data-size="xl"></blx-icon>
+                      </button>
+                    </div>
+                    <div
+                      class="blx-Carousel-dotsContainer -centered-bottom"
+                      data-target="blx-carousel.dotContainer"
+                    ></div>
+                    <template data-target="blx-carousel.dotTemplate">
+                      <button class="blx-Carousel-dot" data-targets="blx-carousel.dots"></button>
+                    </template>
+                  </div>
+                </blx-carousel>
               </div>
             </div>
-          </blx-carousel>
+          </section>
 
-          <blx-carousel data-items-to-display="2" data-items-to-slide='2'>
-            <div class="" data-target="blx-carousel.container">
-              <div class="" data-target="blx-carousel.slideContainer">
-                <div class="" data-target="blx-carousel.itemContainer">
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div><div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                </div>
-              </div>
-              <div class="">
-                <button data-action="click:blx-carousel#previousSlide">PREV</button>
-                <button data-action="click:blx-carousel#nextSlide">Next</button>
-              </div>
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy__caption">Inputs</h2>
+              <h2 class="blx-Copy__title">SelectBox (single with search)</h2>
+              <blx-select-box>
+                <fieldset data-target="blx-select-box.container">
+                  <label>Select Box</label>
+                  <input
+                    class="blx-SelectBox"
+                    list=""
+                    id="input"
+                    name="examples"
+                    placeholder="Please select an example"
+                    data-target="blx-select-box.input"
+                  />
+                  <datalist class="blx-DataList" data-target="blx-select-box.list">
+                    <option value="Example 1" class="blx-DataList-option" data-targets="blx-select-box.options">
+                      Example 1
+                    </option>
+                    <option value="Second" class="blx-DataList-option" data-targets="blx-select-box.options">
+                      Second
+                    </option>
+                    <option value="Third" class="blx-DataList-option" data-targets="blx-select-box.options">
+                      Third
+                    </option>
+                    <option value="Fourth" class="blx-DataList-option" data-targets="blx-select-box.options">
+                      Fourth
+                    </option>
+                    <option value="Five" class="blx-DataList-option" data-targets="blx-select-box.options">Five</option>
+                    <option value="Six" class="blx-DataList-option" data-targets="blx-select-box.options">Six</option>
+                    <option value="Seven" class="blx-DataList-option" data-targets="blx-select-box.options">
+                      Seven
+                    </option>
+                    <option
+                      value="other"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                      data-target="blx-select-box.lastOption"
+                    >
+                      other
+                    </option>
+                  </datalist>
+                </fieldset>
+              </blx-select-box>
             </div>
-          </blx-carousel>
+          </section>
 
-
-          <blx-carousel data-items-to-display="1" data-items-to-slide='1'>
-            <div class="" data-target="blx-carousel.container">
-              <div class="" data-target="blx-carousel.slideContainer">
-                <div class="" data-target="blx-carousel.itemContainer">
-                <div class="carousel-example-item" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="carousel-example-item" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div><div class="carousel-example-item" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="carousel-example-item" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                <div class="carousel-example-item" data-targets="blx-carousel.items">
-                  <img src="https://picsum.photos/400/400?1">
-                </div>
-                </div>
-              </div>
-              <div class="blx-Carousel-arrowContainer">
-                <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#previousSlide">
-                  <blx-icon data-name="direction-left" data-size="xl"></blx-icon>
-                </button>
-                <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#nextSlide">
-                  <blx-icon data-name="direction-right" data-size="xl"></blx-icon>
-                </button>
-
-              </div>
-              <div class="blx-Carousel-dotsContainer -centered-bottom" data-target="blx-carousel.dotContainer">
-              </div>
-              <template data-target="blx-carousel.dotTemplate">
-                <button class="blx-Carousel-dot" data-targets="blx-carousel.dots"></button>
-              </template>
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer stack stack -l">
+              <h2 class="blx-Copy__caption">Misc</h2>
+              <h2 class="blx-Copy__title">Loader</h2>
+              <blx-loader></blx-loader>
+              <blx-loader data-size="l" data-text="LADEN"></blx-loader>
+              <blx-loader data-size="custom" data-custom-size="1rem"></blx-loader>
             </div>
-          </blx-carousel>
-          </div>
-        </div>
-        </section>
-
-        <section class="blx-Section blx-Copy -section">
-          <div class="blx-LayoutContainer">
-          <h2 class="blx-Copy__caption">Inputs</h2>
-          <h2 class="blx-Copy__title">SelectBox</h2>
-          <blx-select-box>
-          <fieldset data-target="blx-select-box.container">
-              <label>Select Box</label>
-              <input class="blx-SelectBox" autocomplete="off" role="combobox" list="" id="input" name="examples" placeholder="Please select an example" data-target="blx-select-box.input">
-
-              <datalist id="examples" role="listbox" class="blx-DataList" data-target="blx-select-box.list">
-                <option value="Example 1" class="blx-DataList-option" data-targets="blx-select-box.options">Example 1</option>
-                <option value="Second" class="blx-DataList-option" data-targets="blx-select-box.options" >Second</option>
-                <option value="Third" class="blx-DataList-option" data-targets="blx-select-box.options" >Third</option>
-                <option value="Fourth" class="blx-DataList-option" data-targets="blx-select-box.options" >Fourth</option>
-                <option value="Five" class="blx-DataList-option" data-targets="blx-select-box.options" >Five</option>
-                <option value="Six" class="blx-DataList-option" data-targets="blx-select-box.options" >Six</option>
-                <option value="Seven" class="blx-DataList-option" data-targets="blx-select-box.options" >Seven</option>
-                <option value="other" class="blx-DataList-option" data-targets="blx-select-box.options" data-target="blx-select-box.lastOption" >other</option>
-              </datalist>
-        </fieldset>
-          </blx-select-box>
-          </div>
-        </section>
-
+          </section>
         </main>
       </div>
     </theme-switcher>
