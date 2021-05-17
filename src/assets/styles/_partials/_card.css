@@ -7,7 +7,8 @@
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-flat);
 
-  padding:  var(--cardSpacing-vertical) var(--cardSpacing-horizontal);
+  padding-inline:  var(--cardSpacing-horizontal);
+  padding-block: var(--cardSpacing-vertical);
 
   /* NOT SURE YET */
   background-color: var(--color-white);

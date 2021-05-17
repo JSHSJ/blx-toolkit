@@ -31,8 +31,8 @@
         <main class="main">
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__caption">Colors</h2>
-              <h2 class="blx-Copy__title">States</h2>
+              <h2 class="blx-Copy-caption">Colors</h2>
+              <h2 class="blx-Copy-title">States</h2>
               <div class="stack">
                 <div class="valid">valid</div>
                 <div class="valid-with-bg">valid-with-bg</div>
@@ -50,10 +50,10 @@
           </section>
           <section class="blx-Section">
             <div class="blx-LayoutContainer blx-Copy -section">
-              <h2 class="blx-Copy__caption">Typography</h2>
-              <h2 class="blx-Copy__title">States</h2>
+              <h2 class="blx-Copy-caption">Typography</h2>
+              <h2 class="blx-Copy-title">States</h2>
 
-              <div class="blx-Copy__body">
+              <div class="blx-Copy-body">
                 <h1 class="fontSize-hero">Headline Hero</h1>
                 <h1>Headline 1</h1>
                 <h2>Headline 2</h2>
@@ -82,8 +82,56 @@
           </section>
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__title">Modal</h2>
-              <div class="blx-Copy__body">
+              <p class="blx-Copy-caption">Layouts</p>
+              <div class="blx-Copy-body stack stack-l">
+                <div class="stack">
+                  <h2>With Sidebar</h2>
+                  <div class="with-sidebar">
+                    <img src="https://picsum.photos/400/400?1" data-aside />
+                    <p data-grow>
+                      Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport
+                      height). Useful sometimes, as they are always relative to the viewport. No cascading or influence
+                      by parent elements.
+                    </p>
+                  </div>
+                </div>
+                <div class="stack">
+                  <h2 class="blx-Copy-title">Cluster</h2>
+                  <div class="cluster">
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                  </div>
+                </div>
+                <div class="stack">
+                  <h2 class="blx-Copy-title">Stack</h2>
+                  <div class="stack">
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                  </div>
+                </div>
+                <div class="box bg-secondary stack">
+                  <h2 class="blx-Copy-title">Box</h2>
+                  <div class="stack">
+                    <button class="blx-CTAButton">Button</button>
+                    <button class="blx-CTAButton">Button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="blx-Section blx-Copy -section">
+            <div class="blx-LayoutContainer">
+              <h2 class="blx-Copy-title">Modal</h2>
+              <div class="blx-Copy-body">
                 <p>There's two things to a modal.</p>
                 <h3>The Modal / Dialog handling</h3>
                 <p>Handled by a custom element `blx-modal` and consists of</p>
@@ -119,10 +167,10 @@
                   <div class="blx-Modal__container blx-Copy -modal" data-target="blx-modal.container">
                     <div class="blx-Modal__overlay" data-target="blx-modal.overlay"></div>
                     <div class="blx-Modal__content" data-target="blx-modal.content">
-                      <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy__title">
+                      <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy-title">
                         Title (Optional but recommended)
                       </h2>
-                      <div class="box blx-Copy__body">
+                      <div class="box blx-Copy-body">
                         <p>Content?</p>
                       </div>
                       <button
@@ -141,10 +189,10 @@
 
           <section class="blx-Section blx-Copy -section -large">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__title">Accordion</h2>
+              <h2 class="blx-Copy-title">Accordion</h2>
               <blx-accordion data-hasIcon="true">
                 <div
-                  class="box flex-row-center blx-Copy__body"
+                  class="box blx-Copy-body"
                   data-target="blx-accordion.header"
                   data-action="click:blx-accordion#toggle"
                 >
@@ -152,7 +200,7 @@
                   <blx-icon data-name="arrow-down" data-size="l" data-target="blx-accordion.icon"></blx-icon>
                 </div>
                 <div data-target="blx-accordion.content">
-                  <div class="box blx-Copy__body">
+                  <div class="box blx-Copy-body">
                     <p>COOL SHIT BRO</p>
                     <p>COOL SHIT BRO</p>
                     <p>COOL SHIT BRO</p>
@@ -165,8 +213,8 @@
 
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__caption">Elements</h2>
-              <h2 class="blx-Copy__title">Cards</h2>
+              <h2 class="blx-Copy-caption">Elements</h2>
+              <h2 class="blx-Copy-title">Cards</h2>
               <div class="stack stack-l">
                 <div class="blx-Card">Card Content</div>
                 <div class="blx-Card">
@@ -184,7 +232,7 @@
               </div>
 
               <div class="stack">
-                <h2 class="blx-Copy__title">Buttons</h2>
+                <h2 class="blx-Copy-title">Buttons</h2>
                 <button class="blx-CTAButton">Button</button>
 
                 <button class="blx-CTAButton -secondary">Button Secondary</button>
@@ -198,23 +246,30 @@
                 <button class="blx-CTAButton -icon">
                   <blx-icon data-name="arrow-down" data-size="l" />
                 </button>
+
+                <button class="blx-CTAButton -withBoxedIcon">
+                  <span class="blx-CTAButton -icon">
+                    <blx-icon data-name="arrow-down" data-size="l" />
+                  </span>
+                  Button with Icon
+                </button>
               </div>
             </div>
           </section>
 
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__caption">Icons</h2>
-              <h2 class="blx-Copy__title">Icons</h2>
+              <h2 class="blx-Copy-caption">Icons</h2>
+              <h2 class="blx-Copy-title">Icons</h2>
               <blx-icon data-name="arrow-down" data-size="l" />
             </div>
           </section>
 
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__caption">Carousels</h2>
+              <h2 class="blx-Copy-caption">Carousels</h2>
               <div class="stack stack-l">
-                <h2 class="blx-Copy__title">Carousel with images</h2>
+                <h2 class="blx-Copy-title">Carousel with images</h2>
                 <blx-carousel>
                   <div class="" data-target="blx-carousel.container">
                     <div class="" data-target="blx-carousel.slideContainer">
@@ -240,7 +295,7 @@
                   </div>
                 </blx-carousel>
 
-                <h2 class="blx-Copy__title">Carousel with other content</h2>
+                <h2 class="blx-Copy-title">Carousel with other content</h2>
 
                 <blx-carousel>
                   <div class="" data-target="blx-carousel.container">
@@ -394,12 +449,11 @@
           </section>
 
           <section class="blx-Section blx-Copy -section">
-            <div class="blx-LayoutContainer">
-              <h2 class="blx-Copy__caption">Inputs</h2>
-              <h2 class="blx-Copy__title">SelectBox (single with search)</h2>
+            <div class="blx-LayoutContainer stack">
+              <h2 class="blx-Copy-caption">Inputs</h2>
+              <h2 class="blx-Copy-title">SelectBox (single with search)</h2>
               <blx-select-box>
-                <fieldset data-target="blx-select-box.container">
-                  <label>Select Box</label>
+                <fieldset class="blx-Input" data-target="blx-select-box.container">
                   <input
                     class="blx-SelectBox"
                     list=""
@@ -435,15 +489,44 @@
                       other
                     </option>
                   </datalist>
+                  <label>Select Box</label>
                 </fieldset>
               </blx-select-box>
+
+              <div class="blx-Checkbox">
+                <input id="checkbox-id" name="checkbox-id" type="checkbox" />
+                <label for="checkbox-id"> Checkbox Label </label>
+              </div>
+
+              <div class="blx-Input">
+                <input id="input-id" name="input-id" type="text" placeholder="test placeholder" />
+                <label for="input-id">Input label</label>
+              </div>
+
+              <blx-number-input>
+                <div class="blx-NumberInput">
+                  <input
+                    id="input-id"
+                    name="input-id"
+                    type="text"
+                    placeholder="test placeholder"
+                    data-target="blx-number-input.input"
+                  />
+                  <label for="input-id">Input label</label>
+                </div>
+              </blx-number-input>
+
+              <div class="blx-Input">
+                <textarea id="textarea-id" name="textarea-id" placeholder="test placeholder"></textarea>
+                <label for="textarea-id">textarea label</label>
+              </div>
             </div>
           </section>
 
           <section class="blx-Section blx-Copy -section">
             <div class="blx-LayoutContainer stack stack -l">
-              <h2 class="blx-Copy__caption">Misc</h2>
-              <h2 class="blx-Copy__title">Loader</h2>
+              <h2 class="blx-Copy-caption">Misc</h2>
+              <h2 class="blx-Copy-title">Loader</h2>
               <blx-loader></blx-loader>
               <blx-loader data-size="l" data-text="LADEN"></blx-loader>
               <blx-loader data-size="custom" data-custom-size="1rem"></blx-loader>

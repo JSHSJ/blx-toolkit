@@ -4,7 +4,7 @@
 
 .blx-CTAButton {
   --buttonWidth: auto;
-  --buttonPadding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+  --buttonPadding: calc(var(--spacing) * 3);
   --stateColorLight: var(--buttonHoverColor, var(--buttonBackgroundColor));
 
   max-width: var(--inputMaxWidth);
@@ -14,15 +14,15 @@
   align-items: center;
   justify-content: center;
 
-  font-weight: 500;
-  font-size: var(--buttonFontSize);
+  font: var(--ctaFont);
   line-height: var(--buttonLineHeight);
 
   border-radius: var(--borderRadius);
-  padding: var(--buttonPadding);
+  padding-inline: var(--buttonPadding);
   border: 2px solid;
   box-sizing: border-box;
   width: var(--buttonWidth);
+  height: 3em;
 
   cursor: pointer;
 
@@ -95,5 +95,23 @@
   --buttonPadding: 0;
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.blx-CTAButton.-withBoxedIcon {
+  padding: 0;
+  background: transparent;
+  color: var(--text1);
+  border-color: transparent;
+
+  &:hover {
+    color: var(--text2);
+  }
+
+  justify-content: flex-start;
+
+  & > *:first-child {
+    margin-right: calc(var(--spacing) * 2);
+  }
+
 }
 /* END BUTTONS */

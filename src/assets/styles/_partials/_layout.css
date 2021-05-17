@@ -1,19 +1,16 @@
 .blx-Section {
-  padding-top: var(--sectionPadding);
-  padding-bottom: var(--sectionPadding);
+  padding-block: var(--sectionPadding);
 }
 
 .blx-LayoutContainer {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   width: 100%;
   max-width: var(--containerMaxWidth);
-  padding-left: var(--containerPadding);
-  padding-right: var(--containerPadding);
+  padding-inline: var(--containerPadding);
 }
 
 /* STACK */
-
+/* stack content vertically with spacing */
 .stack {
   --gap: calc(var(--spacing) * 2);
   display: grid;
@@ -26,13 +23,35 @@
 }
 
 /* BOX */
-
+/* boxed content, basically for every box element */
 .box {
   padding: var(--contentPadding);
 }
 
-.flex-row-center {
+
+.cluster {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s1);
 }
 
+.with-sidebar {
+  --gap: var(--s2);
+  --minSize: 30rem;
+
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  & [data-aside] {
+    flex-grow: 1;
+  }
+
+  & [data-grow] {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: var(--minSize);
+  }
+
+}

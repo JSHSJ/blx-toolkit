@@ -1,44 +1,76 @@
-.blx-SelectBox {
+/* All things input */
 
+/* TOC:
+
+  - general input style (.blx-Input)
+  - checkbox (.blx-Checkbox)
+  - selectBox adjustments (.blx-SelectBox and .blx-DataList)
+  - number input
+*/
+
+.blx-Input {
+  position: relative;
   width: 100%;
-  padding: calc(var(--spacing) * 2);
-  font: var(--bodyFont);
-  color: var(--text1);
 
-  background: var(--inputBackground);
-  border: 1px solid var(--inputTextColorSecondary);
-  border-radius: var(--borderRadius);
+  --bodyLineHeight: 1;
 
-  &::placeholder {
-    color: 1px solid var(--inputTextColorSecondary);
-    opacity: 0.7;
+  & input, & textarea {
+    width: 100%;
+    padding: calc(var(--spacing) * 2);
+    font: var(--bodyFont);
+    color: var(--text1);
+
+    background: var(--inputBackground);
+    border: 1px solid var(--inputTextColorSecondary);
+    border-radius: var(--borderRadius);
+    transition: padding 150ms;
+
+    &::placeholder {
+      color: var(--inputTextColorSecondary);
+      opacity: 0;
+    }
+
+    &:focus-within::placeholder {
+      opacity: 0.7;
+    }
+
+    &:focus-within, &:not(:placeholder-shown) {
+      outline: none;
+      padding-block:  calc(var(--spacing) * 3) calc(var(--spacing) * 1);
+
+      & ~ label {
+        transform: scale(0.75) translateY(calc(var(--spacing) * -1.5));
+      }
+    }
+
+    &:focus-within {
+      box-shadow: 0 0 0 1px var(--inputTextColor);
+      border-color: var(--inputTextColor);
+    }
   }
 
-  &:focus-within {
-    outline: none;
+  & textarea {
+    resize: none;
+    appearance: none;
+    height: 16rem;
   }
 
-  &.-open {
-    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
-    box-shadow: 0 0 0 1px var(--inputTextColor);
-    border-color: var(--inputTextColor);
+  & label {
+    position: absolute;
+    display: block;
+    top: calc(var(--spacing) * 2);
+    left: calc(var(--spacing) * 2);
+    transition: transform 0.15s linear;
+    transform-origin: top left;
+    border-radius: var(--borderRadius);
+    border: 1px solid transparent;
+    font: var(--bodyFont);
+    pointer-events: none;
+    color: var(--inputTextColor);
   }
 }
 
-.blx-DataList {
-  display: flex;
-  flex-direction: column;
-  max-height: 300px;
-  overflow-y: scroll;
-  padding: 0;
-  width: 100%;
 
-  background: var(--inputBackground);
-  border: 1px solid var(--inputTextColor);
-  box-shadow: 0 0 0 1px var(--inputTextColor);
-  border-top: none;
-  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
-}
 
 .blx-DataList-option {
   width: 100%;
@@ -59,5 +91,130 @@
   &:hover {
     background-color: var(--text2);
     color: var(--surface1);
+  }
+}
+
+
+.blx-Checkbox {
+  position: relative;
+
+  & input {
+    width: 1rem;
+    height: 1rem;
+    appearance: none;
+    position: absolute;
+
+  &:checked + label:before {
+    background-color: var(--text1);
+    border-color: var(--text1);
+  }
+
+  &:checked + label:after {
+    opacity: 1;
+    transform: rotate(45deg);
+
+  }
+
+  &:disabled + label:before {
+    background: var(--color-disabled);
+    border-color: var(--color-disabled);
+  }
+  }
+
+  & label {
+    padding-left: calc(var(--spacing) * 4);
+    position: relative;
+    line-height: 1rem;
+    display: inline-block;
+    font-size: var(--s-1);
+    cursor: pointer;
+
+
+    &:before {
+      display: block;
+      background-color: transparent;
+      border: 1px solid var(--text2);
+      border-radius: var(--borderRadius-small);
+      content: "";
+      height: var(--s1);
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.15s ease-in-out;
+      width: var(--s1);
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      border: 2px solid var(--surface1);
+      border-left: 0;
+      border-top: 0;
+      height: var(--s-1);
+      width: var(--s-4);
+      left: 0.65em;
+      top: 0em;
+
+      opacity: 0;
+      position: absolute;
+      transform: rotate(60deg);
+      transition: opacity 0.15s ease-out,  transform 0.3s ease-out;
+    }
+  }
+
+}
+
+
+
+.blx-SelectBox {
+  &.-open {
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    box-shadow: 0 0 0 1px var(--inputTextColor);
+    border-color: var(--inputTextColor);
+  }
+}
+
+.blx-DataList {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 0;
+  width: 100%;
+
+  background: var(--inputBackground);
+  border: 1px solid var(--inputTextColor);
+  box-shadow: 0 0 0 1px var(--inputTextColor);
+  border-top: none;
+  z-index: 1;
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+}
+
+.blx-NumberInput {
+  background: var(--surface2);
+  width: 100%;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--text2);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-inline: 0;
+  padding-block: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+  color: var(--text);
+
+  & input {
+    width: 100%;
+    background: transparent;
+    font: var(--titleFont);
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & label {
+    font-size: var(--s-1);
   }
 }

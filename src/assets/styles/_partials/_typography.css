@@ -183,8 +183,9 @@ strong {
 
 .blx-Copy {
   --titleFont: var(--titleWeight) var(--titleFontSize)/var(--titleLineHeight) var(--fontFamily);
-  --captionFont: var(--fontWeight-light) var(--captionFontSize,18px)/var(--captionLineHeight,1.555555556) var(--fontFamily);
-  --bodyFont: var(--fontWeight-light) var(--bodyFontSize,18px)/var(--bodyLineHeight,1.555555556) var(--fontFamily);
+  --captionFont: var(--fontWeight-light) var(--captionFontSize,18px)/var(--captionLineHeight,1.4) var(--fontFamily);
+  --bodyFont: var(--fontWeight-light) var(--bodyFontSize,18px)/var(--bodyLineHeight,1.4) var(--fontFamily);
+  --ctaFont: var(--fontWeight-medium) var(--ctaFontSize,16px)/1 var(--fontFamily);
 
   --largeSpacing: calc(var(--spacing) * 2);
   --paragraphSpacing: calc(var(--spacing) * 1);
@@ -195,12 +196,15 @@ strong {
 .blx-Copy.-section {
   --titleWeight: var(--fontWeight-bold);
   --titleFontSize: var(--fontSize-xl);
-  --titleLineHeight: 1.4;
+  --titleLineHeight: 1.3;
 
   --captionFontSize: 20px;
+  --captionLineHeight: 1.4;
 
-  --bodyFontSize: 1rem;
+  --bodyFontSize: var(--fontSize-base);
   --bodyLineHeight: 1.4;
+
+  --ctaFontSize: 16px;
 }
 
 .blx-Copy.-modal {
@@ -216,7 +220,7 @@ strong {
   --bodyFontSize: 16px;
 }
 
-.blx-Copy__body {
+.blx-Copy-body {
   font: var(--bodyFont);
   color: var(--text1);
 
@@ -229,16 +233,15 @@ strong {
   }
 }
 
-.blx-Copy__title {
+.blx-Copy-title {
   font: var(--titleFont);
   color: var(--text1);
 }
 
-.blx-Copy__caption {
+.blx-Copy-caption {
   font: var(--captionFont);
   color: var(--text1);
   text-decoration: underline;
-  /* margin-bottom: var(--spacing-2); */
   text-underline-offset: 0.1em;
   text-decoration-color: var(--brand1);
   text-underline-offset: 0.2em;
