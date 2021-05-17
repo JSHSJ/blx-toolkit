@@ -29,9 +29,9 @@
 .blx-Carousel-dot {
   width: 1rem;
   height: 1rem;
-  background-color: var(--textColor);
+  background-color: var(--text1);
 
   &.-active {
-    background-color: var(--accentColor);
+    background-color: var(--brand1);
   }
 }

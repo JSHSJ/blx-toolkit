@@ -6,6 +6,7 @@
   --buttonWidth: auto;
   --buttonPadding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
   --stateColorLight: var(--buttonHoverColor, var(--buttonBackgroundColor));
+
   max-width: var(--inputMaxWidth);
 
   display: inline-flex;
@@ -34,18 +35,17 @@
 }
 
 .blx-CTAButton:hover {
-  background-color: var(--buttonHoverColor, var(--buttonBackgroundColor));
-  border-color: var(--buttonHoverColor, var(--buttonBackgroundColor));
-  color: var(--buttonHoverTextColor);
-  opacity: var(--buttonHoverOpacity, 1);
+  background-color: var(--buttonHoverBackgroundColor);
+  border-color: var(--buttonHoverBackgroundColor);
+  color: var(--buttonHoverColor);
 }
 
 .blx-CTAButton:disabled {
-  --buttonBackgroundColor: var(--buttonDisabledColor);
-  --buttonBorderColor: var(--buttonDisabledColor);
-  --buttonHoverColor: var(--buttonDisableColor);
-  --buttonHoverTextColor: var(--backgroundColor);
-  --buttonColor: var(--backgroundColor);
+  --buttonBackgroundColor: var(--disabledColor);
+  --buttonBorderColor: var(--disabledColor);
+  --buttonHoverColor: var(--disabledColor);
+  --buttonHoverTextColor: var(--surface1);
+  --buttonColor: var(--surface1);
 
   cursor: not-allowed;
 }
@@ -76,24 +76,24 @@
 }
 
 .blx-CTAButton.-stealth {
-  --buttonBackgroundColor: var(--backgroundColor);
-  --buttonColor: var(--textColor);
+  --buttonBackgroundColor: var(--surface1);
+  --buttonColor: var(--text1);
   --buttonBorderColor: transparent;
-  --buttonHoverTextColor: var(--linkHoverColor);
-  --buttonHoverColor: var(--backgroundColor);
+  --buttonHoverColor: var(--text2);
+  --buttonHoverBackgroundColor: var(--surface1);
 }
 
 .blx-CTAButton.-secondary {
-  --buttonColor: var(--textColor);
-  --buttonBackgroundColor: var(--backgroundColor);
-  --buttonBorderColor: var(--textColor);
-  --buttonHoverColor: var(--textColorSecondary);
-  --buttonHoverTextColor: var(--backgroundColor);
-
+  --buttonColor: var(--text1);
+  --buttonBackgroundColor: var(--surface1);
+  --buttonBorderColor: var(--text1);
+  --buttonHoverColor: var(--surface-1);
+  --buttonHoverBackgroundColor: var(--text2);
 }
 
 .blx-CTAButton.-icon {
-  --buttonPadding: calc(var(--spacing) * 1);
-  height: auto;
+  --buttonPadding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 /* END BUTTONS */

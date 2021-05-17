@@ -4,15 +4,15 @@
   min-height: 100vh;
 }
 
-.sidebar, .main {
-  padding: calc(var(--spacing) * 4);
+.sidebar {
+  padding: var(--defaultPadding-horizontal);
 }
 
 .sidebar {
   flex-basis: 15rem;
   flex-grow: 1;
   position: relative;
-  border-right: 2px solid var(--textColor);
+  border-right: 2px solid var(--text1);
   background-color: var(--inputBackground);
 }
 

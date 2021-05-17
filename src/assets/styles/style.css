@@ -14,32 +14,28 @@
 
 html {
   font-family: 'Moderat', sans-serif;
-  font-size: 16px;
+  font-size: 1.125em;
   font-weight: 300;
-
-  background-color: white;
 }
 
 :focus, .default-focus:focus, button:focus {
   outline-offset: .75ch;
-  outline: 1px solid var(--textColorSecondary);
+  outline: 1px solid var(--text2);
   border-radius: var(--borderRadius-small);
 }
 
 :focus:not(:focus-visible), .default-focus:focus:not(:focus-visible), button:focus:not(:focus-visible) {
   outline: none;
-  borderRadius: inherit;
+  border-radius: inherit;
 }
 
 main {
-  background-color: var(--backgroundColor);
-  color: var(--textColor);
+  background-color: var(--surface1);
+  color: var(--text1);
 }
 
 
 .defaults {
-  --ratio: 1.4;
-
   --buttonFontSize: 1rem;
   --buttonLineHeight: 1;
 
@@ -101,12 +97,12 @@ a,
   text-decoration: underline;
   font-weight: 500;
   text-underline-offset: 0.1em;
-  color: var(--linkColor);
+  color: var(--text1);
 }
 
 a:hover,
 .blx-link:hover {
-  color: var(--linkHoverColor);
+  color: var(--text2);
 }
 
 /* END LINKS */
@@ -115,6 +111,6 @@ a:hover,
 /* ??? */
 
 .blx-hr {
-  border-top: 1px solid #0a2540;
+  border-top: 1px solid var(--text2);
   width: 100%;
 }

@@ -3,14 +3,24 @@
   width: 100%;
   padding: calc(var(--spacing) * 2);
   font: var(--bodyFont);
-  color: var(--textColor);
+  color: var(--text1);
 
   background: var(--inputBackground);
-  border: 2px solid var(--inputTextColorSecondary);
+  border: 1px solid var(--inputTextColorSecondary);
   border-radius: var(--borderRadius);
+
+  &::placeholder {
+    color: 1px solid var(--inputTextColorSecondary);
+    opacity: 0.7;
+  }
+
+  &:focus-within {
+    outline: none;
+  }
 
   &.-open {
     border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    box-shadow: 0 0 0 1px var(--inputTextColor);
     border-color: var(--inputTextColor);
   }
 }
@@ -23,9 +33,9 @@
   padding: 0;
   width: 100%;
 
-
-  background: var(--backgroundColor);
-  border: 2px solid var(--textColor);
+  background: var(--inputBackground);
+  border: 1px solid var(--inputTextColor);
+  box-shadow: 0 0 0 1px var(--inputTextColor);
   border-top: none;
   border-radius: 0 0 var(--borderRadius) var(--borderRadius);
 }
@@ -33,20 +43,21 @@
 .blx-DataList-option {
   width: 100%;
   font: var(--bodyFont);
-  color: var(--textColor);
+  color: var(--inputTextColor);
   padding: calc(var(--spacing) * 2);
 
   &.-selected {
-    background-color: var(--textColorSecondary);
-    color: var(--backgroundColorSecondary);
+    background-color: var(--text1);
+    color: var(--surface2);
   }
 
   &.-active {
-    background-color: var(--backgroundColorSecondary);
-    color: var(--textColor);
+    background-color: var(--text2);
+    color: var(--surface1);
   }
 
   &:hover {
-    background-color: var(--backgroundColorSecondary);
+    background-color: var(--text2);
+    color: var(--surface1);
   }
 }
