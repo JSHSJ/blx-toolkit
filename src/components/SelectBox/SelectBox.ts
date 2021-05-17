@@ -58,7 +58,11 @@ export class BlxSelectBoxElement extends HTMLElement {
   };
 
   private setupAttributes = () => {
-    // this.list.setAttribute('--maxHeight', this.options[0].clientHeight.toString());
+    this.input.setAttribute('autocomplete', 'off');
+    this.input.setAttribute('role', 'combobox');
+    this.list.setAttribute('role', 'listbox');
+    this.list.setAttribute('id', this.input.name);
+    this.input.setAttribute('aria-expanded', 'false');
   };
 
   private openDataList = () => {
@@ -67,6 +71,7 @@ export class BlxSelectBoxElement extends HTMLElement {
     this.list.classList.add('-open');
     this.classList.add('-open');
     this.input.classList.add('-open');
+    this.input.setAttribute('aria-expanded', 'true');
   };
 
   private closeDataList = () => {
@@ -74,6 +79,7 @@ export class BlxSelectBoxElement extends HTMLElement {
     this.list.classList.remove('-open');
     this.classList.remove('-open');
     this.input.classList.remove('-open');
+    this.input.setAttribute('aria-expanded', 'false');
   };
 
   private filter = () => {
