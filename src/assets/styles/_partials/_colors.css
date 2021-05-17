@@ -160,3 +160,24 @@
 
   --validStandaloneColor: var(--color-successGreen-600);
 }
+
+
+.bg-primary {
+  background: var(--surface1);
+}
+
+.bg-secondary {
+  background: var(--surface2);
+}
+
+.color-primary {
+  color: var(--text1);
+}
+
+.color-secondary {
+  color: var(--text2);
+}
+
+.color-brand {
+  color: var(--brand);
+}
