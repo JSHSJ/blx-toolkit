@@ -11,18 +11,44 @@
   <body>
     <theme-switcher>
       <div class="container defaults" data-target="theme-switcher.root">
-        <aside class="sidebar">
+        <blx-header>
+          <header class="blx-Header">
+            <div class="blx-LayoutContainer horizontally-centered">
+              <a class="logo" href="/" aria-label="home"></a>
+              <div class="horizontally-centered align-right">
+                <div class="algin-right">Put whatever is on the right here</div>
+              </div>
+            </div>
+          </header>
+        </blx-header>
+        <aside class="sidebar blx-Copy">
           <div class="stack">
-            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-default">
+            <button
+              class="blx-CTAButton"
+              data-targets="theme-switcher.buttons"
+              data-theme="theme-default"
+            >
               Default Theme
             </button>
-            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-purple">
+            <button
+              class="blx-CTAButton"
+              data-targets="theme-switcher.buttons"
+              data-theme="theme-purple"
+            >
               Purple Theme
             </button>
-            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-mutedLight">
+            <button
+              class="blx-CTAButton"
+              data-targets="theme-switcher.buttons"
+              data-theme="theme-mutedLight"
+            >
               Muted Light Theme
             </button>
-            <button class="blx-CTAButton" data-targets="theme-switcher.buttons" data-theme="theme-mutedDark">
+            <button
+              class="blx-CTAButton"
+              data-targets="theme-switcher.buttons"
+              data-theme="theme-mutedDark"
+            >
               Muted Dark Theme
             </button>
           </div>
@@ -63,16 +89,16 @@
                 <h6>Headline 6</h6>
 
                 <p>
-                  Parapgrah Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport
-                  height). Useful sometimes, as they are always relative to the viewport. No cascading or influence by
-                  parent elements.
+                  Parapgrah Viewport units are things like 10vw (10% of the viewport width) or 2vh
+                  (2% of the viewport height). Useful sometimes, as they are always relative to the
+                  viewport. No cascading or influence by parent elements.
                 </p>
 
                 <p>
                   <small
-                    >Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport height).
-                    Useful sometimes, as they are always relative to the viewport. No cascading or influence by parent
-                    elements.</small
+                    >Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of
+                    the viewport height). Useful sometimes, as they are always relative to the
+                    viewport. No cascading or influence by parent elements.</small
                   >
                 </p>
 
@@ -89,9 +115,9 @@
                   <div class="with-sidebar">
                     <img src="https://picsum.photos/400/400?1" data-aside />
                     <p data-grow>
-                      Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of the viewport
-                      height). Useful sometimes, as they are always relative to the viewport. No cascading or influence
-                      by parent elements.
+                      Viewport units are things like 10vw (10% of the viewport width) or 2vh (2% of
+                      the viewport height). Useful sometimes, as they are always relative to the
+                      viewport. No cascading or influence by parent elements.
                     </p>
                   </div>
                 </div>
@@ -136,38 +162,50 @@
                 <h3>The Modal / Dialog handling</h3>
                 <p>Handled by a custom element `blx-modal` and consists of</p>
                 <ul>
-                  <li>A button with attribute 'data-action="click:blx-modal#open"' to open the modal</li>
                   <li>
-                    A container element with attribute 'data-target="blx-modal.container"' to contain all of the modal
+                    A button with attribute 'data-action="click:blx-modal#open"' to open the modal
                   </li>
                   <li>
-                    An overlay element with attribute 'data-target="blx-modal.overlay"' that sits below the content but
-                    on top of the document to help focus on the content.
+                    A container element with attribute 'data-target="blx-modal.container"' to
+                    contain all of the modal
                   </li>
                   <li>
-                    A content container element with attribute 'data-target="blx-modal.content"', that sits centered in
-                    the middle (or whereever else you like)
+                    An overlay element with attribute 'data-target="blx-modal.overlay"' that sits
+                    below the content but on top of the document to help focus on the content.
                   </li>
                   <li>
-                    An optional, but recommended title with attribute 'data-target="blx-modal.modalTitle"'. This is used
-                    to label the dialog.
+                    A content container element with attribute 'data-target="blx-modal.content"',
+                    that sits centered in the middle (or whereever else you like)
                   </li>
                   <li>
-                    An optional, but recommended button with attribute 'data-target="blx-modal.close"' and
-                    'data-action="click:blx-modal#dismiss"''. This will close the element.
+                    An optional, but recommended title with attribute
+                    'data-target="blx-modal.modalTitle"'. This is used to label the dialog.
+                  </li>
+                  <li>
+                    An optional, but recommended button with attribute
+                    'data-target="blx-modal.close"' and 'data-action="click:blx-modal#dismiss"''.
+                    This will close the element.
                   </li>
                 </ul>
                 <p>
-                  This custom element handles all of the logic, accessibility and niceties, but is completely unstyled,
-                  although the animations are included.
+                  This custom element handles all of the logic, accessibility and niceties, but is
+                  completely unstyled, although the animations are included.
                 </p>
                 <h3>The style classes</h3>
                 <blx-modal>
-                  <button class="blx-CTAButton" data-action="click:blx-modal#open">Open Modal</button>
-                  <div class="blx-Modal__container blx-Copy -modal" data-target="blx-modal.container">
+                  <button class="blx-CTAButton" data-action="click:blx-modal#open">
+                    Open Modal
+                  </button>
+                  <div
+                    class="blx-Modal__container blx-Copy -modal"
+                    data-target="blx-modal.container"
+                  >
                     <div class="blx-Modal__overlay" data-target="blx-modal.overlay"></div>
                     <div class="blx-Modal__content" data-target="blx-modal.content">
-                      <h2 data-target="blx-modal.modalTitle" class="box blx-Modal__title blx-Copy-title">
+                      <h2
+                        data-target="blx-modal.modalTitle"
+                        class="box blx-Modal__title blx-Copy-title"
+                      >
                         Title (Optional but recommended)
                       </h2>
                       <div class="box blx-Copy-body">
@@ -197,7 +235,11 @@
                   data-action="click:blx-accordion#toggle"
                 >
                   <h3 class="">COOOL SHIT BRO</h3>
-                  <blx-icon data-name="arrow-down" data-size="l" data-target="blx-accordion.icon"></blx-icon>
+                  <blx-icon
+                    data-name="arrow-down"
+                    data-size="inline"
+                    data-target="blx-accordion.icon"
+                  ></blx-icon>
                 </div>
                 <div data-target="blx-accordion.content">
                   <div class="box blx-Copy-body">
@@ -244,15 +286,26 @@
                 <button class="blx-CTAButton -stealth">Button Stealth</button>
 
                 <button class="blx-CTAButton -icon">
-                  <blx-icon data-name="arrow-down" data-size="l" />
+                  <blx-icon data-name="arrow-down" data-size="inline" />
                 </button>
 
                 <button class="blx-CTAButton -withBoxedIcon">
                   <span class="blx-CTAButton -icon">
-                    <blx-icon data-name="arrow-down" data-size="l" />
+                    <blx-icon data-name="arrow-down" data-size="inline" />
                   </span>
                   Button with Icon
                 </button>
+              </div>
+              <div class="stack">
+                <h2 class="blx-Copy-title">Commonly used elements</h2>
+
+                <div class="blx-iconText">
+                  <div class="with-sidebar">
+                    <blx-icon data-name="arrow-down" data-size="m"></blx-icon>
+                    <h3>Headline</h3>
+                  </div>
+                  <p>Text describing the headline</p>
+                </div>
               </div>
             </div>
           </section>
@@ -261,7 +314,7 @@
             <div class="blx-LayoutContainer">
               <h2 class="blx-Copy-caption">Icons</h2>
               <h2 class="blx-Copy-title">Icons</h2>
-              <blx-icon data-name="arrow-down" data-size="l" />
+              <blx-icon data-name="arrow-down" data-size="inline" />
             </div>
           </section>
 
@@ -303,70 +356,85 @@
                       <div class="" data-target="blx-carousel.itemContainer">
                         <div class="box" data-targets="blx-carousel.items">
                           <p>
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                            quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                            voluptas nulla pariatur?"
                           </p>
                         </div>
                         <div class="box stack" data-targets="blx-carousel.items">
                           <p>
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                            quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                            voluptas nulla pariatur?"
                           </p>
                           <p>
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-                          </p>
-                        </div>
-                        <div class="box" data-targets="blx-carousel.items">
-                          <p>
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                            quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                            voluptas nulla pariatur?"
                           </p>
                         </div>
                         <div class="box" data-targets="blx-carousel.items">
                           <p>
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-                            molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                            quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                            voluptas nulla pariatur?"
+                          </p>
+                        </div>
+                        <div class="box" data-targets="blx-carousel.items">
+                          <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                            illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                            quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                            quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                            voluptas nulla pariatur?"
                           </p>
                         </div>
                       </div>
@@ -428,11 +496,17 @@
                       </div>
                     </div>
                     <div class="blx-Carousel-arrowContainer">
-                      <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#previousSlide">
-                        <blx-icon data-name="direction-left" data-size="xl"></blx-icon>
+                      <button
+                        class="blx-CTAButton -icon -secondary"
+                        data-action="click:blx-carousel#previousSlide"
+                      >
+                        <blx-icon data-name="direction-left" data-size="m"></blx-icon>
                       </button>
-                      <button class="blx-CTAButton -icon -secondary" data-action="click:blx-carousel#nextSlide">
-                        <blx-icon data-name="direction-right" data-size="xl"></blx-icon>
+                      <button
+                        class="blx-CTAButton -icon -secondary"
+                        data-action="click:blx-carousel#nextSlide"
+                      >
+                        <blx-icon data-name="direction-right" data-size="m"></blx-icon>
                       </button>
                     </div>
                     <div
@@ -463,21 +537,53 @@
                     data-target="blx-select-box.input"
                   />
                   <datalist class="blx-DataList" data-target="blx-select-box.list">
-                    <option value="Example 1" class="blx-DataList-option" data-targets="blx-select-box.options">
+                    <option
+                      value="Example 1"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
                       Example 1
                     </option>
-                    <option value="Second" class="blx-DataList-option" data-targets="blx-select-box.options">
+                    <option
+                      value="Second"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
                       Second
                     </option>
-                    <option value="Third" class="blx-DataList-option" data-targets="blx-select-box.options">
+                    <option
+                      value="Third"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
                       Third
                     </option>
-                    <option value="Fourth" class="blx-DataList-option" data-targets="blx-select-box.options">
+                    <option
+                      value="Fourth"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
                       Fourth
                     </option>
-                    <option value="Five" class="blx-DataList-option" data-targets="blx-select-box.options">Five</option>
-                    <option value="Six" class="blx-DataList-option" data-targets="blx-select-box.options">Six</option>
-                    <option value="Seven" class="blx-DataList-option" data-targets="blx-select-box.options">
+                    <option
+                      value="Five"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
+                      Five
+                    </option>
+                    <option
+                      value="Six"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
+                      Six
+                    </option>
+                    <option
+                      value="Seven"
+                      class="blx-DataList-option"
+                      data-targets="blx-select-box.options"
+                    >
                       Seven
                     </option>
                     <option
@@ -517,7 +623,11 @@
               </blx-number-input>
 
               <div class="blx-Input">
-                <textarea id="textarea-id" name="textarea-id" placeholder="test placeholder"></textarea>
+                <textarea
+                  id="textarea-id"
+                  name="textarea-id"
+                  placeholder="test placeholder"
+                ></textarea>
                 <label for="textarea-id">textarea label</label>
               </div>
             </div>
@@ -528,7 +638,7 @@
               <h2 class="blx-Copy-caption">Misc</h2>
               <h2 class="blx-Copy-title">Loader</h2>
               <blx-loader></blx-loader>
-              <blx-loader data-size="l" data-text="LADEN"></blx-loader>
+              <blx-loader data-size="inline" data-text="LADEN"></blx-loader>
               <blx-loader data-size="custom" data-custom-size="1rem"></blx-loader>
             </div>
           </section>

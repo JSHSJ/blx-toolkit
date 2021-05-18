@@ -55,3 +55,34 @@
   }
 
 }
+
+.horizontally-centered {
+  display: flex;
+  align-items: center;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+.align-left: {
+  margin-right: auto;
+}
+
+
+
+.blx-iconText {
+  display: flex;
+  flex-direction: column;
+
+  & > :first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & > :last-child {
+    padding-left: 40px
+  }
+
+}
